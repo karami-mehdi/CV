@@ -1,2 +1,1 @@
-# CV
-My Academic Curriculum Vitae (CV)
+This is my Academic Curriculum Vitae (CV)
