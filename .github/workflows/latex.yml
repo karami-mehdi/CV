@@ -1,0 +1,27 @@
+name: Build LaTeX document
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up LaTeX environment
+      uses: xu-cheng/latex-action@v2
+      with:
+        root_file: CV.tex
+        latexmk_use_lualatex: true
+
+    - name: Upload PDF
+      uses: actions/upload-artifact@v2
+      with:
+        name: CV
+        path: CV.pdf
