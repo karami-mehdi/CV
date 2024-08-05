@@ -17,11 +17,21 @@ jobs:
     - name: Set up LaTeX environment
       uses: xu-cheng/latex-action@v2
       with:
-        root_file: ./CV.tex
+        root_file: CV.tex
         latexmk_use_lualatex: true
+
+    - name: Commit PDF file
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git add <your-output-file>.pdf  # Replace with your output file path
+        git commit -m "Add compiled PDF"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.ACTIONS_DEPLOY_KEY }}
 
     - name: Upload PDF
       uses: actions/upload-artifact@v2
       with:
         name: CV
-        path: ./CV.pdf
+        path: CV.pdf
