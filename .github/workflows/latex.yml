@@ -20,24 +20,7 @@ jobs:
         root_file: CV.tex
         latexmk_use_lualatex: true
 
-    - name: List files in the working directory
-      run: ls -R
-
-    - name: Check if PDF exists
-      run: |
-        if [ -f CV.pdf ]; then echo "PDF exists"; else echo "PDF not found"; fi
-
-    - name: Commit PDF file
-      run: |
-        git config --global user.name 'github-actions[bot]'
-        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git add CV.pdf
-        git commit -m "Add compiled PDF"
-        git push
-      env:
-        GITHUB_TOKEN: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-
-    - name: Upload PDF as artifact
+    - name: Upload PDF
       uses: actions/upload-artifact@v2
       with:
         name: CV
