@@ -25,8 +25,10 @@ jobs:
         root_file: CV.tex
         latexmk_use_lualatex: true
 
-    - name: Upload PDF
-      uses: actions/upload-artifact@v3
+    - name: Upload PDF to Release
+      id: upload-release-asset
+      uses: softprops/action-gh-release@v1
       with:
-        name: CV
-        path: CV.pdf
+        files: CV.pdf
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
