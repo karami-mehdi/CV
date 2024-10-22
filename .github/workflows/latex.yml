@@ -25,10 +25,23 @@ jobs:
         root_file: CV.tex
         latexmk_use_lualatex: true
 
+    - name: Create Tag
+      id: tag_creation
+      run: |
+        TAG_NAME="v$(date +'%Y%m%d%H%M%S')"
+        echo "TAG_NAME=$TAG_NAME" >> $GITHUB_ENV
+
+    - name: Create Git Tag
+      run: git tag ${{ env.TAG_NAME }}
+
+    - name: Push Tag
+      run: git push origin ${{ env.TAG_NAME }}
+
     - name: Upload PDF to Release
       id: upload-release-asset
       uses: softprops/action-gh-release@v1
       with:
         files: CV.pdf
+        tag_name: ${{ env.TAG_NAME }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
