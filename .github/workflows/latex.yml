@@ -24,6 +24,7 @@ jobs:
       with:
         root_file: CV.tex
         latexmk_use_lualatex: true
+        root: .
 
     - name: Move CV to docs folder
       run: |
