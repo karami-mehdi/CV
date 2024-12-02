@@ -25,14 +25,16 @@ jobs:
         latexmk_use_lualatex: true
         root: .
 
-    - name: Commit and Push changes to main branch
+    - name: Commit and Push changes to update-cv branch
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git checkout -b update-cv
+        git checkout -b update-cv || git checkout update-cv
         git add CV.pdf
         git commit -m "Update CV.pdf"
-        git push --set-upstream origin update-cv
+        git fetch origin
+        git rebase origin/update-cv
+        git push origin update-cv --force-with-lease
 
     - name: Create a Pull Request to the Private Repository
       run: |
