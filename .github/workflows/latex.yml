@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-  pull_request:
 
 jobs:
   build:
@@ -30,30 +29,9 @@ jobs:
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        git checkout -b update-cv
         git add CV.pdf
         git commit -m "Update CV.pdf"
-
-        # Fetch the latest changes from the main branch before pushing
-        git pull origin main --rebase || echo "Merge failed, proceed with rebase"
-        git push origin main
-
-    - name: Set up SSH for GitHub Actions using deploy key
-      run: |
-        mkdir -p ~/.ssh
-        echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/id_rsa
-        chmod 600 ~/.ssh/id_rsa
-        ssh-keyscan github.com >> ~/.ssh/known_hosts
-
-    - name: Add Remote for Private Repository
-      run: |
-        git remote add private-repo git@github.com:nsswifter/AcademicApplicationDocuments.git
-
-    - name: Create a new branch for the PR
-      run: |
-        # Create a new branch to push changes before creating the PR
-        git checkout -b update-cv
-        git add .
-        git commit -m "Update CV Repository"
         git push --set-upstream origin update-cv
 
     - name: Create a Pull Request to the Private Repository
