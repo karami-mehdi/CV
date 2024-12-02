@@ -33,8 +33,12 @@ jobs:
         git add CV.pdf
         git commit -m "Update CV.pdf"
         git fetch origin
-        git rebase origin/update-cv
-        git push origin update-cv --force-with-lease
+        git merge origin/update-cv --no-ff -m "Merge remote-tracking branch 'origin/update-cv'"
+        git checkout --theirs CV.pdf
+        git add CV.pdf
+        git add .github/workflows/latex.yml
+        git commit --amend --no-edit
+        git push origin update-cv
 
     - name: Create a Pull Request to the Private Repository
       run: |
