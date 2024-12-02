@@ -33,14 +33,14 @@ jobs:
         git add CV.pdf
         git commit -m "Update CV.pdf"
 
-        # Fetch and merge remote changes before pushing
-        git pull origin main --rebase || echo "Merge failed, proceed with rebase"  # Optional: Rebase before merge to avoid conflicts
+        # Fetch the latest changes from the main branch before pushing
+        git pull origin main --rebase || echo "Merge failed, proceed with rebase"
         git push origin main
 
-    - name: Set up SSH for GitHub Actions
+    - name: Set up SSH for GitHub Actions using deploy key
       run: |
         mkdir -p ~/.ssh
-        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+        echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
         ssh-keyscan github.com >> ~/.ssh/known_hosts
 
@@ -48,10 +48,22 @@ jobs:
       run: |
         git remote add private-repo git@github.com:nsswifter/AcademicApplicationDocuments.git
 
-    - name: Merge changes with private repository
+    - name: Create a new branch for the PR
       run: |
-        # Fetch the latest changes from the private repo
-        git fetch private-repo
-        git checkout main
-        git merge private-repo/main --allow-unrelated-histories
-        git push private-repo main
+        # Create a new branch to push changes before creating the PR
+        git checkout -b update-cv-pdf
+        git add CV.pdf
+        git commit -m "Update CV.pdf"
+        git push --set-upstream origin update-cv-pdf
+
+    - name: Create a Pull Request to the Private Repository
+      run: |
+        curl -X POST \
+          -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+          -d '{
+                "title": "Update CV.pdf",
+                "head": "update-cv-pdf",
+                "base": "main",
+                "body": "Automated PR to update CV.pdf"
+              }' \
+          https://api.github.com/repos/nsswifter/AcademicApplicationDocuments/pulls
