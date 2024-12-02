@@ -33,3 +33,13 @@ jobs:
         git add CV.pdf
         git commit -m "Update CV.pdf"
         git push origin main
+
+    - name: Merge changes with private repository
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        git remote add private-repo https://x-access-token:${GITHUB_TOKEN}@github.com/nsswifter/AcademicApplicationDocuments.git
+        git fetch private-repo
+        git checkout main
+        git merge private-repo/main --allow-unrelated-histories
+        git push private-repo main
