@@ -32,29 +32,30 @@ jobs:
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
         git add CV.pdf
         git commit -m "Update CV.pdf"
+
+        # Fetch and merge remote changes before pushing
+        git pull origin main --rebase || echo "Merge failed, proceed with rebase" # Optional: Rebase before merge to avoid conflicts
         git push origin main
 
     - name: Debug Repository Access
       env:
         GITHUB_TOKEN: ${{ secrets.PRIVATE_REPO_PAT }}
       run: |
-        echo "GITHUB_TOKEN ${GITHUB_TOKEN}"
-        git remote add private-repo https://x-access-token:${GITHUB_TOKEN}@github.com/nsswifter/AcademicApplicationDocuments.git
-        git ls-remote private-repo || echo "Failed to access repository"
+        git remote add test-repo https://x-access-token:${GITHUB_TOKEN}@github.com/nsswifter/AcademicApplicationDocuments.git || true
+        git ls-remote test-repo || echo "Failed to access repository"
 
-    - name: Debug Access
+    - name: Add Remote if Not Exists
       env:
         GITHUB_TOKEN: ${{ secrets.PRIVATE_REPO_PAT }}
       run: |
-        set -x
-        git remote add private-repo https://x-access-token:${GITHUB_TOKEN}@github.com/nsswifter/AcademicApplicationDocuments.git
-        git ls-remote private-repo
+        if ! git remote get-url private-repo; then
+          git remote add private-repo https://x-access-token:${GITHUB_TOKEN}@github.com/nsswifter/AcademicApplicationDocuments.git
+        fi
 
     - name: Merge changes with private repository
       env:
         GITHUB_TOKEN: ${{ secrets.PRIVATE_REPO_PAT }}
       run: |
-        git remote add private-repo https://x-access-token:${GITHUB_TOKEN}@github.com/nsswifter/AcademicApplicationDocuments.git
         git fetch private-repo
         git checkout main
         git merge private-repo/main --allow-unrelated-histories
