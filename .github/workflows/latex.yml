@@ -36,7 +36,7 @@ jobs:
 
     - name: Merge changes with private repository
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.PRIVATE_REPO_PAT }}
       run: |
         git remote add private-repo https://x-access-token:${GITHUB_TOKEN}@github.com/nsswifter/AcademicApplicationDocuments.git
         git fetch private-repo
