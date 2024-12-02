@@ -34,6 +34,22 @@ jobs:
         git commit -m "Update CV.pdf"
         git push origin main
 
+    - name: Debug Repository Access
+      env:
+        GITHUB_TOKEN: ${{ secrets.PRIVATE_REPO_PAT }}
+      run: |
+        echo "GITHUB_TOKEN ${GITHUB_TOKEN}"
+        git remote add private-repo https://x-access-token:${GITHUB_TOKEN}@github.com/nsswifter/AcademicApplicationDocuments.git
+        git ls-remote private-repo || echo "Failed to access repository"
+
+    - name: Debug Access
+      env:
+        GITHUB_TOKEN: ${{ secrets.PRIVATE_REPO_PAT }}
+      run: |
+        set -x
+        git remote add private-repo https://x-access-token:${GITHUB_TOKEN}@github.com/nsswifter/AcademicApplicationDocuments.git
+        git ls-remote private-repo
+
     - name: Merge changes with private repository
       env:
         GITHUB_TOKEN: ${{ secrets.PRIVATE_REPO_PAT }}
