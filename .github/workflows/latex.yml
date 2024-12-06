@@ -33,7 +33,7 @@ jobs:
         git add CV.pdf
         git commit -m "Update CV.pdf"
         git fetch origin
-        git merge origin/update-cv --no-ff -m "Merge remote-tracking branch 'origin/update-cv'"
+        git merge origin/update-cv --no-ff --allow-unrelated-histories -m "Merge remote-tracking branch 'origin/update-cv'"
         git checkout --theirs CV.pdf
         git add CV.pdf
         git add .github/workflows/latex.yml
