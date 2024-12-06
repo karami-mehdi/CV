@@ -42,12 +42,8 @@ jobs:
 
     - name: Create a Pull Request to the Private Repository
       run: |
-          curl -X POST \
-            -H "Authorization: token ${{ secrets.SSH_PRIVATE_KEY }}" \
-            -d '{
-                "title": "Update CV Repository",
-                "head": "update-cv",  # The branch you're creating the PR from
-                "base": "main",  # The branch you're merging into
-                "body": "Automated PR to update CV"
-                }' \
+        curl -X POST \
+          -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+          -H "Content-Type: application/json" \
+          -d '{"title": "Update CV Repository", "head": "update-cv", "base": "main", "body": "Automated PR to update CV"}' \
           https://api.github.com/repos/nsswifter/AcademicApplicationDocuments/pulls
