@@ -33,11 +33,11 @@ jobs:
         git add CV.pdf
         git commit -m "Update CV.pdf"
         git fetch origin
-        git merge origin/update-cv --no-ff --allow-unrelated-histories -m "Merge remote-tracking branch 'origin/update-cv'"
+        git merge origin/update-cv --no-ff --allow-unrelated-histories -m "Merge remote-tracking branch 'origin/update-cv'" || true
         git checkout --theirs CV.pdf
-        git add CV.pdf
-        git add .github/workflows/latex.yml
-        git commit --amend --no-edit
+        git checkout --theirs .github/workflows/latex.yml
+        git add CV.pdf .github/workflows/latex.yml
+        git commit -m "Resolve merge conflicts in CV.pdf and workflow file"
         git push origin update-cv
 
     - name: Create a Pull Request to the Private Repository
