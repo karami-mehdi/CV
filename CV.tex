@@ -24,6 +24,8 @@
 \def\ps@plain{
   \def\@oddhead{\headername}
   \let\@evenhead\@oddhead
+  \def\@oddfoot{\hbox to 0pt{\small Last Update: \textbf{October, 2024}\hss}\hbox to\textwidth{\hfill\thepage\hfill}} % Align text to left and page number to center
+  \let\@evenfoot\@oddfoot
 }
 \makeatother
 \pagestyle{plain}
@@ -114,7 +116,7 @@ Contributed to the development of diverse, international-scale applications acro
 \begin{itemize}[label={\customsquare}]    
     \item \href{https://app.resiliencebox.com}{\underline{\textbf{Resilience Box}}}
     \begin{itemize}
-        \item Healthcare app focused on mental health, providing online learning resources, well-being videos, an in-depth podcast series, informational fact sheets, and access to counseling and coaching services.
+        \item Healthcare app focused on mental health management, providing online learning resources, well-being videos, an in-depth podcast series, informational fact sheets, and access to counseling and coaching services.
     \end{itemize}
 
     \item \href{https://www.blossomapp.com}{\underline{\textbf{Blossom -- Save and Invest}}}
@@ -215,9 +217,9 @@ Credential ID CT-QD4IETGO \hfill Jan 2023
     >{\customsquare \hspace{1mm} \raggedright\arraybackslash}X
     @{\extracolsep{\fill}}
     }
-Swimming & Traveling \\[10pt]
-Cooking International Cuisine & Esports Gaming (LOL) \\[10pt]
-Listening to Music & Watching Movies
+Swimming & Cooking International Cuisine \\[10pt]
+Esports Gaming (LOL) & Listening to Music \\[10pt]
+Watching Movies & Engaging with Social Media
 \end{tabularx}
 
 \end{document}
