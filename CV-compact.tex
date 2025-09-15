@@ -20,11 +20,13 @@
 
 % Document setup
 \geometry{left=0.5in, right=0.5in, top=0.5in, bottom=0.5in} % Set page margins
-\makeatletter % Use \headername command in the header
+\makeatletter
 \def\ps@plain{
   \def\@oddhead{\headername}
   \let\@evenhead\@oddhead
-  \def\@oddfoot{\hbox to 0pt{\small Last Update: \textbf{March, 2025}\hss}\hbox to\textwidth{\hfill\thepage\hfill}} % Align text to left and page number to center
+  \def\@oddfoot{
+    \raisebox{4mm}{\hbox to 0pt{\small Last Update: \textbf{September, 2025}\hss}\hbox to\textwidth{\hfill\thepage\hfill}}
+  }
   \let\@evenfoot\@oddfoot
 }
 \makeatother
@@ -47,8 +49,8 @@
 %--------------Custom Commands--------------
 \newcommand{\customsquare}{\raisebox{0.25ex}{\scalebox{0.45}{$\blacksquare$}}}
 \newcommand{\headername}{
-  \ifnum\value{page}>1 % Only if the page number is greater than 1
-    \hfil\textbf{Mehdi Karami}
+  \ifnum\value{page}>1
+    \raisebox{-4mm}{\textbf{Mehdi Karami}}
   \fi
 }
 % Personal information
@@ -78,7 +80,7 @@
 
 %-----------------EDUCATION-----------------
 \section*{Education}
-\textbf{Bachelor of Computer Engineering} - GPA: 3.50 (out of 4) \hfill Sep 2021 - Expected Jul 2025 \\
+\textbf{Bachelor of Computer Engineering} -  GPA: 3.57/4.00 (equivalent to 17.88/20) \hfill Sep 2021 - Aug 2025 \\
 Zand Institute of Higher Education  \hfill Shiraz, Iran \\[5pt]
 \mbox{Visiting Student\hspace{0.1mm}\llap{Visiting Student}} \hfill Feb 2023 - Jul 2024 \\
 University of Science and Culture \hfill Tehran, Iran
