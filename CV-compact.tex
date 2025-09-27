@@ -20,12 +20,13 @@
 
 % Document setup
 \geometry{left=0.5in, right=0.5in, top=0.5in, bottom=0.5in} % Set page margins
+% \raisebox{4mm}{\hbox to 0pt{\small Last Update: \textbf{September, 2025}\hss}\hbox to\textwidth{\hfill\thepage\hfill}}
 \makeatletter
 \def\ps@plain{
   \def\@oddhead{\headername}
   \let\@evenhead\@oddhead
   \def\@oddfoot{
-    \raisebox{4mm}{\hbox to 0pt{\small Last Update: \textbf{September, 2025}\hss}\hbox to\textwidth{\hfill\thepage\hfill}}
+    \raisebox{4mm}{\hbox to 0pt{}\hbox to\textwidth{\hfill\thepage\hfill}}
   }
   \let\@evenfoot\@oddfoot
 }
@@ -53,6 +54,7 @@
     \raisebox{-4mm}{\textbf{Mehdi Karami}}
   \fi
 }
+
 % Personal information
 \newcommand{\name}{\textcolor{tintColor}{Mehdi} Karami} % Name
 \newcommand{\phone}{+98 (990) 956-2438} % Phone Number
@@ -65,17 +67,17 @@
 \begin{center}
 \renewcommand{\arraystretch}{1.5}
 \begin{tabular}{@{} p{\linewidth} @{}}
-\textbf{\huge \name} \hfill \href{mailto:\email}{\underline{\small \faEnvelope\ \email}} \hfill \href{tel:\phone}{\underline{\small \faPhone\ \phone}} \\
-{\small \faLocationArrow\ Shiraz, Iran} \hfill \hfill \href{https://github.com/karami-mehdi}{\underline{\small \faGithub\ github.com/karami-mehdi}} \hfill \href{https://www.linkedin.com/in/karami-mehdi}{\underline{\small \faLinkedin\ linkedin.com/in/karami-mehdi}}\\ % LinkedIn profile
+\textbf{\huge \name} \hfill \href{mailto:\email}{\underline{\small \faEnvelope\ \email}} \hfill \href{tel:\phone}{\underline{\small \faPhone\ \phone}} \hspace{14mm} \hfill\\
+{\small \faLocationArrow\ Shiraz, Iran} \hfill \hfill \href{https://github.com/karami-mehdi}{\underline{\small \faGithub\ github.com/karami-mehdi}} \hspace{2mm} \hfill \href{https://www.linkedin.com/in/karami-mehdi}{\underline{\small \faLinkedin\ linkedin.com/in/karami-mehdi}}\\ % LinkedIn profile
 \end{tabular}
 \end{center}
 
 %-----------------SUMMARY-------------------
 \section*{Summary}
 \begin{itemize}[label={\customsquare}]
-    \item Machine Learning Enthusiast with a solid foundation in developing AI-driven projects, gaining expertise in model training, algorithm optimization, and problem-solving through hands-on experience.
-    \item Highly motivated Researcher with active contributions to open-source projects, demonstrating strong research capabilities, teamwork, and effective communication in academic and collaborative environments.
-    \item Skilled Programmer proficient in multiple programming languages and technologies, with practical experience as an iOS Developer for an international company, winning a coding competition, leading workshops, and earning certifications in relevant programming courses.
+    \item Machine Learning Researcher with expertise in developing AI models, having established a pre-trained GAN for limited-labeled brain MRI segmentation, producing advances in automated neuroimaging and contributing to scientific and clinical research.
+    \item Skilled Programmer proficient in multiple programming languages and technologies, with practical experience as an iOS Developer for an international company, having led workshops and won first place in a coding competition, which demonstrate strong technical expertise, teamwork, and effective communication in collaborative settings.
+    \item Active Open-Source Contributor, collaborating on public and volunteer projects, fostering knowledge sharing and providing tools for developer and research communities.
 \end{itemize}
 
 %-----------------EDUCATION-----------------
@@ -97,14 +99,38 @@ University of Science and Culture \hfill Tehran, Iran
     >{\customsquare \hspace{1mm} \raggedright\arraybackslash}X
     @{\extracolsep{\fill}}
     }
-Machine learning & Bioinformatics & Computational Neuroscience \\
-Algorithm Design & Programming Language Theory & Compiler Design
+Machine learning & Deep Learning & Computer Vision \\
+Computational Biology & Scientific Computing & Algorithm Design
 \end{tabularx}
+
+%-------------PUBLICATION---------------
+\section*{Publication}
+\textbf{Pre-Trained Generative Adversarial Network for Limited-Labeled Brain MRI Segmentation} \\ [5pt]
+Authors: Mehdi Karami*, Dr. Betsabeh Tanoori \hfill *Primary author, Manuscript in preparation \\
+Code: To be released as open-source
+
+%-------------TEACHING EXPERIENCE---------------
+\section*{Teaching Experience}
+\textbf{Teaching Assistant (TA)} \hfill Zand Institute of Higher Education, Shiraz, Iran \\ [5pt]
+\begin{tabularx}{\textwidth}{@{}X X@{}}
+    \customsquare\hspace{2mm}\textbf{Fall 2024:} 
+    \begin{itemize}
+        \item Human-Computer Interaction
+        \item Digital Electronics
+    \end{itemize}
+    &
+    \customsquare\hspace{2mm}\textbf{Spring 2025:} 
+    \begin{itemize}
+        \item Fundamentals of Computer and Programming
+        \item Digital Electronics
+        \item Computer Architecture
+    \end{itemize}
+\end{tabularx} \\ [-20pt]
 
 %-------------WORK EXPERIENCE---------------
 \section*{Work Experience}
-\textbf{iOS Developer} \hfill Jun 2023 -- Jun 2024 \\ [5pt]
-\href{https://roundtableapps.com}{\underline{Round Table Apps}} \hfill Development Office, Tehran, Iran \\ [12pt]
+\textbf{iOS Developer} \hfill Jun 2023 -- Jun 2024 \\ [3pt]
+\href{https://roundtableapps.com}{\underline{Round Table Apps}} \hfill Development Office, Tehran, Iran \\ [8pt]
 Contributed to the development of diverse, international-scale applications across various domains, including healthcare, finance, and postal transportation.
 
 \begin{itemize}[label={\customsquare}]    
@@ -204,23 +230,67 @@ Hosted by Zand Institute of Higher Education \hfill Shiraz, Iran
 \section*{Certificates}
 \noindent
 \href{https://www.mindluster.com/storage/cer/1688271634.jpg}{\underline{\textbf{Swift for Beginners}}} \hfill Issued by Mind Luster \\ [2pt]
-Credential ID 1688271634 \hfill Mar 2023 \\ [15pt]
+Credential ID 1688271634 \hfill Mar 2023 \\ [5pt]
 \href{https://www.sololearn.com/certificate/CT-QD4IETGO/png}{\underline{\textbf{Theoretical understanding of Swift 4}}} \hfill Issued by Sololearn \\ [2pt]
 Credential ID CT-QD4IETGO \hfill Jan 2023
 
-%------------------HOBBIES------------------
-\section*{Hobbies}
+%-------------LANGUAGE---------------
+\section*{Language}
+\noindent
+\textbf{English:} Fluent \hspace{2em} 
+\textbf{Persian–Turkish:} Native
 
-\begin{tabularx}{\textwidth} { 
-    >{\customsquare \hspace{1mm} \raggedright\arraybackslash}X 
+%-------------TOEFL---------------
+\section*{TOEFL}
+\textbf{Total Score: 89}
+\hspace{4em}
+\begin{tabularx}{0.7\textwidth} { 
+    >{\customsquare\hspace{2mm}\raggedright\arraybackslash}X 
     @{\extracolsep{\fill}}
-    >{\customsquare \hspace{1mm} \raggedright\arraybackslash}X
+    >{\customsquare\hspace{2mm}\raggedright\arraybackslash}X
     @{\extracolsep{\fill}}
-    >{\customsquare \hspace{1mm} \raggedright\arraybackslash}X
+    >{\customsquare\hspace{2mm}\raggedright\arraybackslash}X
+    @{\extracolsep{\fill}}
+    >{\customsquare\hspace{2mm}\raggedright\arraybackslash}X
     @{\extracolsep{\fill}}
     }
-Swimming & Playing Violin & Traveling \\
-Cooking International Cuisine & Esports Gaming (LOL) & Watching Movies
+Reading: \textbf{23} & Listening: \textbf{22} & Speaking: \textbf{19} & Writing: \textbf{25}
 \end{tabularx}
+
+%------------------EXTRACURRICULAR ACTIVITIES------------------
+\section*{Extracurricular Activities}
+
+\begin{tabularx}{\textwidth} { 
+    >{\customsquare\hspace{2mm}\hsize=0.5\hsize\centering\arraybackslash}X
+    >{\customsquare\hspace{2mm}\hsize=0.5\hsize\centering\arraybackslash}X
+    >{\customsquare\hspace{2mm}\hsize=1\hsize\centering\arraybackslash}X
+    >{\customsquare\hspace{2mm}\hsize=0.8\hsize\centering\arraybackslash}X
+}
+Swimming & Traveling & Cooking International Cuisine & Esports Gaming (LOL)
+\end{tabularx}
+
+%------------------REFERENCES------------------
+\section*{References}
+\noindent
+\vtop{\hbox{\customsquare\hspace{2mm}\textbf{Dr. Betsabeh Tanoori}}
+\hbox{\quad Associate Professor}
+\hbox{\quad Department of Computer Engineering}
+\hbox{\quad Zand Institute of Higher Education}
+\hbox{\quad Shiraz, Iran}
+\hbox{\quad \texttt{b.tanoori@zand.ac.ir}}}%
+\hfill
+\vtop{\hbox{\customsquare\hspace{2mm}\textbf{Dr. Azadeh Tabatabaei}}
+\hbox{\quad Associate Professor}
+\hbox{\quad Department of Computer Engineering}
+\hbox{\quad University of Science and Culture}
+\hbox{\quad Tehran, Iran}
+\hbox{\quad \texttt{a.tabatabaei@usc.ac.ir}}}%
+\hfill
+\vtop{\hbox{\customsquare\hspace{2mm}\textbf{Dr. Amir Hossein Rasekh}}
+\hbox{\quad Associate Professor}
+\hbox{\quad Department of Computer Engineering}
+\hbox{\quad Zand Institute of Higher Education}
+\hbox{\quad Shiraz, Iran}
+\hbox{\quad \texttt{ahrasekh@zand.ac.ir}}}
 
 \end{document}
