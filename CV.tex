@@ -35,8 +35,11 @@
 
 % Section and subsection formatting
 \definecolor{tintColor}{RGB}{70,91,136} % Define theme color
-\titleformat{\section}{\color{tintColor}\large\bfseries}{}{0em}{}[\titlerule] % Format section titles
-\titleformat{\subsection}{\bfseries}{}{0em}{}[\vspace{-0.5em}] % Format subsection titles
+
+\newcommand{\sectionline}{\color{tintColor}\leaders\hrule height 0.5pt\hfill}
+\titleformat{\section}{\color{tintColor}\large\bfseries}{}{0em}{\sectiontitleformat}
+\newcommand{\sectiontitleformat}[1]{#1\ \sectionline}
+\titlespacing*{\section}{0pt}{*3.25}{1.5ex}
 
 \setlength{\tabcolsep}{18pt} % Adjusting space around the table
 \setlist[itemize]{topsep=5pt, itemsep=0.5em, parsep=0pt, partopsep=0pt}
@@ -164,13 +167,30 @@ Code: To be released as open-source
     \item Boosted development efficiency by up to \textbf{40\%} through a custom file template, streamlining the development workflow.
     \item Improved product \textbf{quality} by leading collaborative code reviews, fostering a culture of continuous improvement.
     \item Engaged in \textbf{knowledge-sharing} sessions to promote best practices and stay informed on technological advancements.
-    \item Contributed to the implementation of \textbf{Unit Testing}, leveraging \textbf{Behavior-Driven Development (BDD)} to ensure robust and reliable code across projects.
-    \item Developed comprehensive \textbf{documentation} using \textbf{Confluence} and \textbf{Xcode DocC}, enhancing clarity and accessibility for both \textbf{Quality Assurance} and \textbf{iOS} teams.
+    \item Contributed to the implementation of \textbf{Unit Testing}, leveraging \textbf{BDD} to ensure robust and reliable code across projects.
+    \item Developed comprehensive \textbf{documentation} using \textbf{Confluence} and \textbf{Xcode DocC}, for both \textbf{QA} and \textbf{iOS} teams.
     \item Collaborated cross-functionally with \textbf{iOS}, \textbf{Backend}, \textbf{QA}, \textbf{Design}, \textbf{Frontend}, and \textbf{Android} teams, employing \textbf{Scrum}, \textbf{Jira}, and other \textbf{agile management tools} to streamline workflows and improve delivery efficiency.
 \end{itemize}
 
 %-----------OPEN SOURCE PROJECTS------------
 \section*{Open Source Projects}
+% \begin{tabularx}{\textwidth}{@{}X@{\hspace{5mm}}X@{}}
+%     \customsquare\hspace{2mm}\href{https://github.com/karami-mehdi/CyberattackDetection}{\underline{\textbf{Cyberattack Detection and Analysis}}} & 
+%     \customsquare\hspace{2mm}\href{https://github.com/karami-mehdi/SolarPowerGenerationAnalysis}{\underline{\textbf{Solar Power Generation Prediction}}} \\
+%     \vspace{-1mm}
+%     \customsquare\hspace{2mm}\href{https://github.com/AINexumLab/NexumAI}{\underline{\textbf{NexumAI}}} &
+%     \vspace{-1mm}
+%     \customsquare\hspace{2mm}\href{https://github.com/karami-mehdi/AISightQuest}{\underline{\textbf{AI Sight Quest}}} \\
+%     \vspace{-1mm}
+%     \customsquare\hspace{2mm}\href{https://github.com/karami-mehdi/TodayILearned/tree/main/DataMining}{\underline{\textbf{Numeric Prediction}}} &
+%     \vspace{-1mm}
+%     \customsquare\hspace{2mm}\href{https://github.com/karami-mehdi/Heart-Pulse-Detector-Using-Arduino}{\underline{\textbf{Arduino Heart Rate Monitor (BPM Counter)}}} \\
+%     \vspace{-1mm}
+%     \customsquare\hspace{2mm}\href{https://github.com/karami-mehdi/TodayILearned/blob/main/ComputationalIntelligence/CharacterClassificationUsingPerceptron.ipynb}{\underline{\textbf{Character Classification Using Perceptron}}} &
+%     \vspace{-1mm}
+%     \customsquare\hspace{2mm}\href{https://github.com/karami-mehdi/TodayILearned/blob/main/InformationRetrieval/information-retrieval.ipynb}{\underline{\textbf{Information Retrieval}}}
+% \end{tabularx}
+
 \begin{itemize}[label={\customsquare}]
     \item \href{https://github.com/karami-mehdi/CyberattackDetection}{\underline{\textbf{Cyberattack Detection and Anomalous Behavior Analysis}}}
     \begin{itemize}
@@ -240,25 +260,24 @@ Code: To be released as open-source
 \hbox{\quad Stopword Removal, Lemmatization,}
 \hbox{\quad Stemming, Tokenization,}
 \hbox{\quad Inverted Index, Boolean Model, ...} 
-\hbox{\quad Stack: NLTK, inflect}} \\ [5pt]
+\hbox{\quad Stack: NLTK, inflect}}
 
-\small \textbf{Additional projects can be found at: \href{https://github.com/karami-mehdi}{\underline{GitHub account}}.}
+\vspace{4mm}
+\hspace{-6mm} \small \textbf{Additional projects can be found at: \href{https://github.com/karami-mehdi}{\underline{GitHub account}}.}
 
 %---------------VOLUNTEERING----------------
 \section*{Volunteering}
 \href{https://github.com/karami-mehdi/CV/blob/main/Assets/certificate-of-workshop-participation-karami-mehdi-zand-ihe.pdf}{\underline{\textbf{Workshop on Git and GitHub}}} \hfill Dec 2024 \\ [2pt]
 Zand Institute of Higher Education \hfill Shiraz, Iran \\ [5pt]
 \href{https://github.com/karami-mehdi/CV/blob/main/Assets/certificate-of-workshop-participation-karami-mehdi.pdf}{\underline{\textbf{Workshop on Git and GitHub (Techniques for Effective Collaboration)}}} \hfill May 2024 \\ [2pt]
-Credential ID 400434784 \hfill Tehran, Iran \\ 
-K. N. Toosi University of Technology \\ [5pt]
-\textbf{Contributor of \href{https://github.com/swiftlang/swift-evolution}{\underline{\textbf{Swift Evolution GitHub Repository}}}} \hfill Since Dec 2023 \\ [2pt]
-Participated in the proposals of the Swift Evolution repository.
+K. N. Toosi University of Technology \hfill Tehran, Iran \\ [5pt]
+\textbf{Contributor and participant in proposals on \href{https://github.com/swiftlang/swift-evolution}{\underline{\textbf{Swift Evolution GitHub Repository}}}} \hfill Since Dec 2023
 
 %--------------HONORS & AWARDS--------------
 \section*{Honors \& Awards}
 \noindent
 \textbf{Winning First Place in the C++ Programming Language Competition} \hfill May 2022 \\
-Hosted by Zand Institute of Higher Education \hfill Shiraz, Iran
+Zand Institute of Higher Education \hfill Shiraz, Iran
 
 % %---------------CERTIFICATES----------------
 % \section*{Certificates}
