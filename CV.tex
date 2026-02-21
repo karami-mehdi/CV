@@ -15,8 +15,9 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{tabularx}
-\usepackage{lmodern}
+\usepackage{newtxtext,newtxmath}
 \usepackage{microtype}
+\usepackage{marvosym}
 
 % Document setup
 \geometry{left=0.5in, right=0.5in, top=0.5in, bottom=0.5in} % Set page margins
@@ -78,18 +79,17 @@
 %-----------------SUMMARY-------------------
 \section*{Summary}
 \begin{itemize}[label={\customsquare}]
-    \item \textbf{Machine Learning Researcher} with expertise in developing \textbf{AI models}, having established a \textbf{pre-trained GAN} for \textbf{limited-labeled brain MRI segmentation}, advancing practical \textbf{AI} and \textbf{ML applications} and contributing to both \textbf{industry} and \textbf{research}.
-    \item Passionate \textbf{AI Engineer} with over \textbf{5 years of experience} in \textbf{Computer Science}, possessing strong \textbf{technical}, \textbf{theoretical}, and \textbf{analytical} skills, including \textbf{model training}, \textbf{algorithm optimization}, and \textbf{problem-solving}.
-    \item \textbf{Skilled Programmer} proficient in \textbf{Python} and other \textbf{programming languages}, along with modern \textbf{technologies}, with practical experience as an \textbf{iOS Developer} for an \textbf{international company}, demonstrating strong \textbf{technical expertise}, \textbf{teamwork}, and effective \textbf{communication} in \textbf{collaborative settings}.
-    \item \textbf{Active Open-Source Contributor}, collaborating on \textbf{public} and \textbf{volunteer projects}, fostering \textbf{knowledge sharing} and providing \textbf{tools} for \textbf{developer} and \textbf{research communities}.
+    \item \textbf{Machine Learning Researcher} specializing in \textbf{image processing}, having established a \textbf{pre-trained GAN for limited-labeled brain MRI segmentation}, advancing \textbf{medical AI research}.
+    \item Strong foundation in \textbf{machine learning theory and practice}, with experience in \textbf{model development, training, and optimization}, and a clear focus on contributing to \textbf{cutting-edge AI projects} and \textbf{real-world applications}.
+    \item \textbf{Active open-source contributor} in AI, collaborating on \textbf{public and volunteer projects}, reflecting commitment to \textbf{innovation, collaboration, and advancement of the AI community}.
 \end{itemize}
 
 %-----------------EDUCATION-----------------
 \section*{Education}
-\textbf{Bachelor of Computer Engineering} -  GPA: 3.57/4.00 (equivalent to 17.88/20) \hfill Sep 2021 - Aug 2025 \\
-Zand Institute of Higher Education  \hfill Shiraz, Iran \\[5pt]
-\mbox{Visiting Student\hspace{0.1mm}\llap{Visiting Student}} \hfill Feb 2023 - Jul 2024 \\
-University of Science and Culture \hfill Tehran, Iran
+\textbf{Bachelor of Computer Engineering} -  GPA: 17.88/20 (equivalent to 3.57/4.00) \hfill Sep 2021 - Aug 2025 \\
+\textit{Zand Institute of Higher Education} \hfill Shiraz, Iran \\[5pt]
+\textbf{Visiting Student} \hfill Feb 2023 - Jul 2024 \\
+\textit{University of Science and Culture} \hfill Tehran, Iran
 
 %------------RESEARCH INTERESTS-------------
 \section*{Research Interests}
@@ -107,26 +107,63 @@ Machine learning & Deep Learning & Natural Language Processing \\
 Computer Vision & Computational Biology & Scientific Computing
 \end{tabularx}
 
-%-------------TECHNICAL SKILLS---------------
-\section*{Technical Skills}
-\begin{tabularx}{\textwidth}{@{}X@{\hspace{5mm}}X@{}}
-\customsquare\hspace{2mm}\textbf{Programming \& Scripting:} Python, C/C++, Julia, MATLAB, Swift, Objective-C, SQL, Bash, LaTeX, ... & 
-\customsquare\hspace{2mm}\textbf{Data Science \& ML:} TensorFlow/Keras, PyTorch, Scikit-learn, OpenCV, HuggingFace, NumPy, Pandas, Matplotlib \\
-\vspace{-1mm}
-\customsquare\hspace{2mm}\textbf{Deep Learning:} Neural Networks, Image Processing, Natural Language Processing, Transformers, GAN, RAG &
-\vspace{-1mm}
-\customsquare\hspace{2mm}\textbf{Software Development:} Git, CI/CD, Design Patterns, Architectural Patterns, SOLID, iOS Development, Unit Testing, TDD, BDD, Agile (Scrum, Kanban) \\
-\vspace{-1mm}
-\customsquare\hspace{2mm}\textbf{Tools \& Platforms:} Jupyter, Google Colab, GitHub, GitLab, Command Line, Linux, macOS, Jira, Confluence, Trello, VS Code, Xcode &
-\vspace{-1mm}
-\customsquare\hspace{2mm}\textbf{Databases \& Cloud:} MLOps, Vector DBs, Relational DBs (SQLite, PostgreSQL), Firebase, Docker, Kubernetes, Query optimization, Cloud-based AI Model Deployment
-\end{tabularx}
-
 %-------------PUBLICATION---------------
 \section*{Publication}
-\textbf{Pre-Trained Generative Adversarial Network for Limited-Labeled Brain MRI Segmentation} \\ [5pt]
-Authors: Mehdi Karami*, Dr. Betsabeh Tanoori \hfill *Corresponding author, Manuscript in preparation \\
-Code: To be released as open-source
+\textbf{Pre-Trained Generative Adversarial Network for Limited-Labeled Brain MRI Segmentation} \hfill engrXiv, \href{https://doi.org/10.31224/6504}{\underline{DOI: 10.31224/6504}}. \\[3pt]
+Mehdi Karami$^{\text{\Letter}}$, Betsabeh Tanoori
+
+%-----------OPEN SOURCE PROJECTS------------
+\section*{Open Source Projects}
+\begin{itemize}[label={\customsquare}]
+    \item \href{https://github.com/AINexumLab/slm-rag/}{\underline{\textbf{Retrieval-Augmented Generation (RAG) for Small Language Models (SLMs)}}}
+    \begin{itemize}
+        \item Implements a RAG pipeline which including text chunking, embedding, and vector retrieval to enable efficient generation and inference with local Small Language Models (SLMs) as well as standard language models.
+        \item Stack: Pytorch, FAISS, Transformers (HuggingFace), Sentence-Transformers, LangChain, PyMuPDF4LLM, ...
+    \end{itemize}
+
+    \item \href{https://github.com/karami-mehdi/AISightQuest}{\underline{\textbf{AI Sight Quest (Bachelor’s Project)}}}
+    \begin{itemize}
+        \item Utilizes the \href{https://arxiv.org/abs/1810.04805}{\underline{BERT}} language model to extract text from images and answer questions about documents.
+        \item Stack: BERT-SQuAD, Swift, SwiftUI, SwiftData, Apple's \href{https://developer.apple.com/documentation/vision}{\underline{Vision}} and \href{https://developer.apple.com/documentation/speech}{\underline{Speech}} frameworks, \href{https://developer.apple.com/documentation/tipkit}{\underline{TipKit}}, Protocol-Oriented Programming (POP), Model-view-viewmodel (MVVM), ...
+    \end{itemize}
+
+    \item \href{https://github.com/karami-mehdi/CyberattackDetection}{\underline{\textbf{Cyberattack Detection and Anomalous Behavior Analysis}}}
+    \begin{itemize}
+        \item Utilizes an LSTM-based RNN to detect cyberattacks from anomalous network traffic, including DDoS, port scanning, and brute-force attempts.
+        \item Stack: TensorFlow/Keras, Scikit-learn, PCA, ROC Curve, ...
+    \end{itemize}
+
+    \item \href{https://github.com/karami-mehdi/SolarPowerGenerationAnalysis}{\underline{\textbf{Solar Power Generation Prediction}}}
+    \begin{itemize}
+        \item Implements ML models (Linear, Decision Tree, Random Forest, Gradient Boosting, MLP, DNN) to predict solar power generation, evaluated via MAE, MSE, $R^2$, and confusion matrix.
+        \item Stack: TensorFlow, Scikit-learn, Pandas, NumPy, Seaborn, ...
+    \end{itemize}
+    
+    \item \href{https://github.com/AINexumLab/NexumAI}{\underline{\textbf{NexumAI}}}
+    \begin{itemize}
+        \item Provides an interface for training models (e.g., image classification, segmentation) without technical expertise, letting users obtain trained models by supplying datasets and configurations.
+        \item Stack: TensorFlow, PyTorch, Torchvision, PyQt6, ...
+    \end{itemize}
+\end{itemize}
+
+\small \textbf{Additional projects can be found at: \href{https://github.com/karami-mehdi}{\underline{GitHub account}}.}
+
+%-------------WORK EXPERIENCE---------------
+\section*{Work Experience}
+\textbf{iOS Developer} (Full-time, On-site) \hfill Jun 2023 -- Jun 2024 \\
+\href{https://roundtableapps.com}{\underline{\textit{Round Table Apps} (Sydney, Australia)}} \hfill Development Office, Tehran, Iran \\ [-10pt]
+\begin{itemize}[label={\customsquare}]
+    \item Engineered \href{https://www.blossomapp.com}{\underline{\textbf{Blossom -- Save and Invest}}}, a consumer-facing financial application for the \textbf{Australian} and \textbf{New Zealand} markets, serving \textbf{25K+} active users.
+    \item Maintained \href{https://mailplus.com.au}{\underline{\textbf{MailPlus -- MP Operator}}}, a post-transportation application for \textbf{MailPlus Australia}, supporting \textbf{300+} owner-operators and \textbf{30K+} customers.
+    \item Developed and refactored \href{https://app.resiliencebox.com}{\underline{\textbf{Resilience Box}}}, an \textbf{international} wellbeing and resilience platform.
+\end{itemize}
+\textbf{Technical Contributions:}
+\begin{itemize}[label={\customsquare}]
+    \item Researched the development of \textbf{AR} and \textbf{VR} technologies in \textbf{healthcare} using \textbf{visionOS}.
+    \item Conducted in-depth analysis of \textbf{data flows} to identify and model \textbf{user behavioral patterns} across various scenarios.
+    \item Applied key design patterns such as \textbf{MVC}, \textbf{MVVM}, \textbf{VIP}, and \textbf{Repository}.
+    \item Boosted development efficiency by up to \textbf{40\%} through the creation of custom file templates.
+\end{itemize}
 
 %-------------TEACHING EXPERIENCE---------------
 \section*{Teaching Experience}
@@ -146,115 +183,20 @@ Code: To be released as open-source
     \end{itemize}
 \end{tabularx} \\ [-20pt]
 
-%-------------WORK EXPERIENCE---------------
-\section*{Work Experience}
-\textbf{iOS Developer} (Full-time, On-site) \hfill Jun 2023 -- Jun 2024 \\
-\href{https://roundtableapps.com}{\underline{\textit{Round Table Apps} (Sydney, Australia)}} \hfill Development Office, Tehran, Iran \\ [-10pt]
-\begin{itemize}[label={\customsquare}]
-    \item Engineered \href{https://www.blossomapp.com}{\underline{\textbf{Blossom -- Save and Invest}}}, a consumer-facing financial application for the \textbf{Australian} and \textbf{New Zealand} markets, serving \textbf{25K+} active users.
-    \item Maintained \href{https://mailplus.com.au}{\underline{\textbf{MailPlus -- MP Operator}}}, a post-transportation application for \textbf{MailPlus Australia}, supporting \textbf{300+} owner-operators and \textbf{30K+} customers.
-    \item Developed and refactored \href{https://app.resiliencebox.com}{\underline{\textbf{Resilience Box}}}, an \textbf{international} wellbeing and resilience platform.
-\end{itemize}
-\textbf{Technical Contributions:}
-\begin{itemize}[label={\customsquare}]
-    \item Researched the development of \textbf{AR} and \textbf{VR} technologies in healthcare using \textbf{visionOS}.
-    \item Conducted in-depth analysis of \textbf{data flows} to identify and model \textbf{user behavioral patterns} across various scenarios.
-    \item Applied key design patterns such as \textbf{MVC}, \textbf{MVVM}, \textbf{VIP}, and \textbf{Repository}.
-    \item Boosted development efficiency by up to \textbf{40\%} through the creation of custom file templates.
-\end{itemize}
-
-%-----------OPEN SOURCE PROJECTS------------
-\section*{Open Source Projects}
-% \begin{tabularx}{\textwidth}{@{}X@{\hspace{5mm}}X@{}}
-%     \customsquare\hspace{2mm}\href{https://github.com/karami-mehdi/CyberattackDetection}{\underline{\textbf{Cyberattack Detection and Analysis}}} & 
-%     \customsquare\hspace{2mm}\href{https://github.com/karami-mehdi/SolarPowerGenerationAnalysis}{\underline{\textbf{Solar Power Generation Prediction}}} \\
-%     \vspace{-1mm}
-%     \customsquare\hspace{2mm}\href{https://github.com/AINexumLab/NexumAI}{\underline{\textbf{NexumAI}}} &
-%     \vspace{-1mm}
-%     \customsquare\hspace{2mm}\href{https://github.com/karami-mehdi/AISightQuest}{\underline{\textbf{AI Sight Quest}}} \\
-%     \vspace{-1mm}
-%     \customsquare\hspace{2mm}\href{https://github.com/karami-mehdi/TodayILearned/tree/main/DataMining}{\underline{\textbf{Numeric Prediction}}} &
-%     \vspace{-1mm}
-%     \customsquare\hspace{2mm}\href{https://github.com/karami-mehdi/Heart-Pulse-Detector-Using-Arduino}{\underline{\textbf{Arduino Heart Rate Monitor (BPM Counter)}}} \\
-%     \vspace{-1mm}
-%     \customsquare\hspace{2mm}\href{https://github.com/karami-mehdi/TodayILearned/blob/main/ComputationalIntelligence/CharacterClassificationUsingPerceptron.ipynb}{\underline{\textbf{Character Classification Using Perceptron}}} &
-%     \vspace{-1mm}
-%     \customsquare\hspace{2mm}\href{https://github.com/karami-mehdi/TodayILearned/blob/main/InformationRetrieval/information-retrieval.ipynb}{\underline{\textbf{Information Retrieval}}}
-% \end{tabularx}
-
-\begin{itemize}[label={\customsquare}]
-    \item \href{https://github.com/karami-mehdi/CyberattackDetection}{\underline{\textbf{Cyberattack Detection and Anomalous Behavior Analysis}}}
-    \begin{itemize}
-        \item Utilizes an LSTM-based RNN to detect cyberattacks from anomalous network traffic, including DDoS, port scanning, and brute-force attempts.
-        \item Stack: TensorFlow/Keras, Scikit-learn, PCA, ROC Curve, …
-    \end{itemize}
-
-    \item \href{https://github.com/karami-mehdi/SolarPowerGenerationAnalysis}{\underline{\textbf{Solar Power Generation Prediction}}}
-    \begin{itemize}
-        \item Implements ML models (Linear, Decision Tree, Random Forest, Gradient Boosting, MLP, DNN) to predict solar power generation, evaluated via MAE, MSE, $R^2$, and confusion matrix.
-        \item Stack: TensorFlow, Scikit-learn, Pandas, NumPy, Seaborn, ...
-    \end{itemize}
-
-    \item \href{https://github.com/AINexumLab/NexumAI}{\underline{\textbf{NexumAI}}}
-    \begin{itemize}
-        \item Provides an interface for training models (e.g., image classification, segmentation) without technical expertise, letting users obtain trained models by supplying datasets and configurations.
-        \item Stack: TensorFlow, PyTorch, Torchvision, PyQt6, …
-    \end{itemize}
-
-    \item \href{https://github.com/karami-mehdi/AISightQuest}{\underline{\textbf{AI Sight Quest}}}
-    \begin{itemize}
-        \item Utilizes AI to extract text from images via Apple's Vision Framework and provides instant answers to document questions using the \href{https://arxiv.org/abs/1810.04805}{\underline{Bidirectional Encoder Representations from Transformers (BERT)}} language model.
-        \item Stack: BERT-SQuAD, Swift, SwiftUI, SwiftData, \href{https://developer.apple.com/documentation/vision}{\underline{Apple's Vision}} and \href{https://developer.apple.com/documentation/speech}{\underline{Speech Frameworks}}, \href{https://developer.apple.com/documentation/tipkit}{\underline{TipKit}}, Protocol-Oriented Programming (POP), Model-view-viewmodel (MVVM), …
-    \end{itemize}
-
-    \item \href{https://github.com/karami-mehdi/TodayILearned/tree/main/DataMining}{\underline{\textbf{Numeric Prediction}}}
-    \begin{itemize}
-        \item Utilizes collected car price records, applying preprocessing (e.g., normalization, standardization) to handle multilingual values, and implements KNN, Decision Tree, Random Forest, and Gradient Boosting algorithms.
-    \end{itemize}
-
-    % \item \href{https://github.com/karami-mehdi/ProximityFinder}{\underline{\textbf{Proximity Finder}}}
-    % \begin{itemize}
-    %     \item Efficiently detects the nearest point pair on a 2D screen with O(n log n) complexity using Divide and Conquer. Includes an interactive slider for dynamic point adjustment.
-    %     \item Stack: Swift, UIKit, Model-View-Controller (MVC), Algorithm Design, Algorithm Optimization, Core Graphics, … 
-    % \end{itemize}
-
-    % \item \href{https://github.com/karami-mehdi/BookBench}{\underline{\textbf{Book Bench}}}
-    % \begin{itemize}
-    %     \item Streamlines library seat reservations. Key features include sign-up, login, and password reset functionality using Firebase authentication and database.
-    %     \item Stack: Swift, SwiftUI, MVVM, Reactive Programming, Lottie JSON, Figma, …
-    % \end{itemize}
-
-    \item \href{https://github.com/karami-mehdi/Heart-Pulse-Detector-Using-Arduino}{\underline{\textbf{Arduino Heart Rate Monitor (BPM Counter)}}}
-    \begin{itemize}
-        \item Measures heart rate with an Arduino Uno and displays a real-time pulse waveform.
-        \item Stack: Arduino C/C++, Programmable Logic Controller (PLC), Sensor Integration, Display Handling, ...
-    \end{itemize}
-
-    % \item \href{https://github.com/karami-mehdi/CommandLineGame}{\underline{\textbf{Command-line Game}}}
-    % \begin{itemize}
-    %     \item Designs and implements interactive command-line games, emphasizing scalable architecture, efficient logic processing, and a seamless user experience.
-    %     \item Stack: Swift, Protocol-Oriented Programming (POP), Clean Architecture, …
-    % \end{itemize}
-\end{itemize}
-
-\vspace{5pt}
-\hspace{-0.6mm}
-\vtop{\hbox{\customsquare\hspace{2mm}\href{https://github.com/karami-mehdi/TodayILearned/blob/main/ComputationalIntelligence/CharacterClassificationUsingPerceptron.ipynb}{\underline{\textbf{Character Classification Using Perceptron}}}}
-\vspace{5pt}
-\hbox{\quad Neural Network Design,}
-\hbox{\quad Forward/Backward Propagation,}
-\hbox{\quad Sigmoid, Softmax, Cross-Entropy, ...}
-\hbox{\quad Stack: pure NumPy}}
-\hspace{20mm}
-\vtop{\hbox{\customsquare\hspace{2mm}\href{https://github.com/karami-mehdi/TodayILearned/blob/main/InformationRetrieval/information-retrieval.ipynb}{\underline{\textbf{Information Retrieval}}}}
-\vspace{5pt}
-\hbox{\quad Stopword Removal, Lemmatization,}
-\hbox{\quad Stemming, Tokenization,}
-\hbox{\quad Inverted Index, Boolean Model, ...} 
-\hbox{\quad Stack: NLTK, inflect}}
-
-\vspace{4mm}
-\hspace{-6mm} \small \textbf{Additional projects can be found at: \href{https://github.com/karami-mehdi}{\underline{GitHub account}}.}
+%-------------TECHNICAL SKILLS---------------
+\section*{Technical Skills}
+\begin{tabularx}{\textwidth}{@{}X@{\hspace{5mm}}X@{}}
+\customsquare\hspace{2mm}\textbf{Programming \& Scripting:} Python, C/C++, Julia, MATLAB, Swift, Objective-C, SQL, Bash, LaTeX, ... & 
+\customsquare\hspace{2mm}\textbf{Data Science \& ML:} TensorFlow/Keras, PyTorch, Scikit-learn, OpenCV, HuggingFace, NumPy, Pandas, ... \\
+\vspace{-1mm}
+\customsquare\hspace{2mm}\textbf{Deep Learning:} Neural Networks, Image Processing, Natural Language Processing, Transformers, GAN, RAG &
+\vspace{-1mm}
+\customsquare\hspace{2mm}\textbf{Software Development:} Git, CI/CD, Design Patterns, SOLID, iOS Development, Unit Testing, TDD, BDD, Agile \\
+\vspace{-1mm}
+\customsquare\hspace{2mm}\textbf{Tools \& Platforms:} Jupyter, Google Colab, GitHub, GitLab, Command Line, Linux, macOS, Jira, Confluence, Trello &
+\vspace{-1mm}
+\customsquare\hspace{2mm}\textbf{Databases \& Cloud:} MLOps, Vector DBs, Relational DBs (SQLite, PostgreSQL), Docker, Kubernetes, Query Optimization
+\end{tabularx}
 
 %---------------VOLUNTEERING----------------
 \section*{Volunteering}
