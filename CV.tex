@@ -28,27 +28,26 @@
   \let\@evenhead\@oddhead
   \def\@oddfoot{
     \raisebox{4mm}{\hbox to 0pt{\small Last Update: \textbf{February, 2026}\hss}\hbox to\textwidth{\hfill\thepage\hfill}}
-}
+  }
   \let\@evenfoot\@oddfoot
 }
 \makeatother
 \pagestyle{plain}
 
 % Section and subsection formatting
-\definecolor{tintColor}{RGB}{70,91,136} % Define theme color
-
+\definecolor{tintColor}{RGB}{70,91,136}
 \newcommand{\sectionline}{\color{tintColor}\leaders\hrule height 0.5pt\hfill}
 \titleformat{\section}{\color{tintColor}\large\bfseries}{}{0em}{\sectiontitleformat}
 \newcommand{\sectiontitleformat}[1]{#1\ \sectionline}
 \titlespacing*{\section}{0pt}{*3.25}{1.5ex}
 
-\setlength{\tabcolsep}{18pt} % Adjusting space around the table
+\setlength{\tabcolsep}{18pt}
 \setlist[itemize]{topsep=5pt, itemsep=0.5em, parsep=0pt, partopsep=0pt}
 
 % Hyperlink setup
 \hypersetup{
-    urlbordercolor = black, % Border color for URLs
-    pdfborderstyle = {/S/U/W 0} % Border style for PDF links
+    urlbordercolor = black,
+    pdfborderstyle = {/S/U/W 0}
 }
 
 %--------------Custom Commands--------------
@@ -71,7 +70,7 @@
 \begin{center}
 \renewcommand{\arraystretch}{1.5}
 \begin{tabular}{@{} p{\linewidth} @{}}
-\textbf{\huge \name} \hfill \href{mailto:\email}{\underline{\small \faEnvelope\ \email}} \hfill \href{tel:\phone}{\underline{\small \faPhone\ \phone}} \hspace{14mm} \hfill\\
+\textbf{\huge \name} \hfill \hspace{9mm} \href{mailto:\email}{\underline{\small \faEnvelope\ \email}} \hfill \href{tel:\phone}{\underline{\small \faPhone\ \phone}} \hspace{12mm} \hfill\\
 {\small \faLocationArrow\ Shiraz, Iran} \hfill \hfill \href{https://github.com/karami-mehdi}{\underline{\small \faGithub\ github.com/karami-mehdi}} \hspace{2mm} \hfill \href{https://www.linkedin.com/in/karami-mehdi}{\underline{\small \faLinkedin\ linkedin.com/in/karami-mehdi}}\\ % LinkedIn profile
 \end{tabular}
 \end{center}
