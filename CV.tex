@@ -27,7 +27,7 @@
   \def\@oddhead{\headername}
   \let\@evenhead\@oddhead
   \def\@oddfoot{
-    \raisebox{4mm}{\hbox to 0pt{\small Last Update: \textbf{February, 2026}\hss}\hbox to\textwidth{\hfill\thepage\hfill}}
+    \raisebox{4mm}{\hbox to 0pt{\small Last Update: \textbf{November 2026}\hss}\hbox to\textwidth{\hfill\thepage\hfill}}
   }
   \let\@evenfoot\@oddfoot
 }
@@ -42,12 +42,14 @@
 \titlespacing*{\section}{0pt}{*3.25}{1.5ex}
 
 \setlength{\tabcolsep}{18pt}
-\setlist[itemize]{topsep=5pt, itemsep=0.5em, parsep=0pt, partopsep=0pt}
 
+\setlist[itemize]{topsep=5pt, itemsep=0.5em, parsep=0pt, partopsep=0pt}
 % Hyperlink setup
 \hypersetup{
-    urlbordercolor = black,
-    pdfborderstyle = {/S/U/W 0}
+    colorlinks=false,
+    pdfborder={0 0 1},
+    pdfborderstyle={/S/S/W 1},
+    urlbordercolor=cyan
 }
 
 %--------------Custom Commands--------------
@@ -68,11 +70,14 @@
 
 %-----------------HEADING-------------------
 \begin{center}
-\renewcommand{\arraystretch}{1.5}
-\begin{tabular}{@{} p{\linewidth} @{}}
-\textbf{\huge \name} \hfill \hspace{9mm} \href{mailto:\email}{\underline{\small \faEnvelope\ \email}} \hfill \href{tel:\phone}{\underline{\small \faPhone\ \phone}} \hspace{12mm} \hfill\\
-{\small \faLocationArrow\ Shiraz, Iran} \hfill \hfill \href{https://github.com/karami-mehdi}{\underline{\small \faGithub\ github.com/karami-mehdi}} \hspace{2mm} \hfill \href{https://www.linkedin.com/in/karami-mehdi}{\underline{\small \faLinkedin\ linkedin.com/in/karami-mehdi}}\\ % LinkedIn profile
-\end{tabular}
+    \textbf{\huge \smash{\name}} \hfill \hspace{4.65mm}
+    \href{mailto:\email}{\small { }\faEnvelope\ \email { }} \hfill
+    \href{tel:\phone}{\small { }\faPhone\ \phone { }} \hspace{8.35mm} \hfill\\[4pt]
+    
+    {\small \faLocationArrow\ Shiraz, Persia} \hfill \hfill
+    \href{https://github.com/karami-mehdi}{\small { }\faGithub\ github.com/karami-mehdi }
+    \hspace{6.5mm} \hfill
+    \href{https://www.linkedin.com/in/karami-mehdi}{\small { }\faLinkedin\ linkedin.com/karami-mehdi }
 \end{center}
 
 %-----------------SUMMARY-------------------
@@ -86,9 +91,9 @@
 %-----------------EDUCATION-----------------
 \section*{Education}
 \textbf{Bachelor of Computer Engineering} -  GPA: 17.88/20 (equivalent to 3.57/4.00) \hfill Sep 2021 - Aug 2025 \\
-\textit{Zand Institute of Higher Education} \hfill Shiraz, Iran \\[5pt]
+\textit{Zand Institute of Higher Education} \hfill Shiraz, Persia \\[5pt]
 \textbf{Visiting Student} \hfill Feb 2023 - Jul 2024 \\
-\textit{University of Science and Culture} \hfill Tehran, Iran
+\textit{University of Science and Culture} \hfill Tehran, Persia
 
 %------------RESEARCH INTERESTS-------------
 \section*{Research Interests}
@@ -108,53 +113,53 @@ Computer Vision & Computational Biology & Scientific Computing
 
 %-------------PUBLICATION---------------
 \section*{Publication}
-\textbf{Pre-Trained Generative Adversarial Network for Limited-Labeled Brain MRI Segmentation} \hfill engrXiv, \href{https://doi.org/10.31224/6504}{\underline{DOI: 10.31224/6504}}. \\[3pt]
+\textbf{Pre-Trained Generative Adversarial Network for Limited-Labeled Brain MRI Segmentation} \hfill engrXiv,{ } \href{https://doi.org/10.31224/6504}{DOI: 10.31224/6504} \\[3pt]
 Mehdi Karami$^{\text{\Letter}}$, Betsabeh Tanoori
 
 %-----------OPEN SOURCE PROJECTS------------
 \section*{Open Source Projects}
 \begin{itemize}[label={\customsquare}]
-    \item \href{https://github.com/AINexumLab/slm-rag/}{\underline{\textbf{Retrieval-Augmented Generation (RAG) for Small Language Models (SLMs)}}}
+    \item \href{https://github.com/AINexumLab/slm-rag/}{\textbf{ Retrieval-Augmented Generation (RAG) for Small Language Models (SLMs) }}
     \begin{itemize}
         \item Implements a RAG pipeline which includes text chunking, embedding, and vector retrieval to enable efficient generation and inference with local Small Language Models (SLMs) as well as standard language models.
         \item Stack: Pytorch, FAISS, Transformers (HuggingFace), Sentence-Transformers, LangChain, PyMuPDF4LLM, ...
     \end{itemize}
 
-    \item \href{https://github.com/karami-mehdi/AISightQuest}{\underline{\textbf{AI Sight Quest (Bachelor’s Project)}}}
+    \item \href{https://github.com/karami-mehdi/AISightQuest}{\textbf{ AI Sight Quest (Bachelor’s Project) }}
     \begin{itemize}
-        \item Utilizes the \href{https://arxiv.org/abs/1810.04805}{\underline{BERT}} language model to extract text from images and answer questions about documents.
-        \item Stack: BERT-SQuAD, Swift, SwiftUI, SwiftData, Apple's \href{https://developer.apple.com/documentation/vision}{\underline{Vision}} and \href{https://developer.apple.com/documentation/speech}{\underline{Speech}} frameworks, \href{https://developer.apple.com/documentation/tipkit}{\underline{TipKit}}, Protocol-Oriented Programming (POP), Model-view-viewmodel (MVVM), ...
+        \item Utilizes the BERT language model to extract text from images and answer questions about documents.
+        \item Stack: BERT-SQuAD, Swift, SwiftUI, SwiftData, Apple's Vision and Speech frameworks, TipKit, Protocol-Oriented Programming (POP), Model-view-viewmodel (MVVM), ...
     \end{itemize}
 
-    \item \href{https://github.com/karami-mehdi/CyberattackDetection}{\underline{\textbf{Cyberattack Detection and Anomalous Behavior Analysis}}}
+    \item \href{https://github.com/karami-mehdi/CyberattackDetection}{\textbf{ Cyberattack Detection and Anomalous Behavior Analysis }}
     \begin{itemize}
         \item Utilizes an LSTM-based RNN to detect cyberattacks from anomalous network traffic, including DDoS, port scanning, and brute-force attempts.
         \item Stack: TensorFlow/Keras, Scikit-learn, PCA, ROC Curve, ...
     \end{itemize}
 
-    \item \href{https://github.com/karami-mehdi/SolarPowerGenerationAnalysis}{\underline{\textbf{Solar Power Generation Prediction}}}
+    \item \href{https://github.com/karami-mehdi/SolarPowerGenerationAnalysis}{\textbf{ Solar Power Generation Prediction }}
     \begin{itemize}
         \item Implements ML models (Linear, Decision Tree, Random Forest, Gradient Boosting, MLP, DNN) to predict solar power generation, evaluated via MAE, MSE, $R^2$, and confusion matrix.
         \item Stack: TensorFlow, Scikit-learn, Pandas, NumPy, Seaborn, ...
     \end{itemize}
     
-    \item \href{https://github.com/AINexumLab/NexumAI}{\underline{\textbf{NexumAI}}}
+    \item \href{https://github.com/AINexumLab/NexumAI}{\textbf{ NexumAI }}
     \begin{itemize}
         \item Provides an interface for training models (e.g., image classification, segmentation) without technical expertise, letting users obtain trained models by supplying datasets and configurations.
         \item Stack: TensorFlow, PyTorch, Torchvision, PyQt6, ...
     \end{itemize}
 \end{itemize}
 
-\small \textbf{Additional projects can be found at: \href{https://github.com/karami-mehdi}{\underline{GitHub account}}.}
+\small \textbf{Additional projects can be found at: { }\href{https://github.com/karami-mehdi}{ GitHub account } .}
 
 %-------------WORK EXPERIENCE---------------
 \section*{Work Experience}
 \textbf{iOS Developer} (Full-time, on-site) \hfill Jun 2023 -- Jun 2024 \\
-\href{https://roundtableapps.com}{\underline{\textit{Round Table Apps} (Sydney, Australia)}} \hfill Development Office, Tehran, Iran \\ [-10pt]
+\href{https://roundtableapps.com}{\textit{ Round Table Apps} } (Sydney, Australia) \hfill Development Office, Tehran, Persia \\ [-10pt]
 \begin{itemize}[label={\customsquare}]
-    \item Engineered \href{https://www.blossomapp.com}{\underline{\textbf{Blossom -- Save and Invest}}}, a consumer-facing financial application for the \textbf{Australian} and \textbf{New Zealand} markets, serving \textbf{25K+} active users.
-    \item Maintained \href{https://mailplus.com.au}{\underline{\textbf{MailPlus -- MP Operator}}}, a post-transportation application for \textbf{MailPlus Australia}, supporting \textbf{300+} owner-operators and \textbf{30K+} customers.
-    \item Developed and refactored \href{https://app.resiliencebox.com}{\underline{\textbf{Resilience Box}}}, an \textbf{international} wellbeing and resilience platform.
+    \item Engineered { }\href{https://www.blossomapp.com}{\textbf{ Blossom -- Save and Invest }} , a consumer-facing financial application for the \textbf{Australian} and \textbf{New Zealand} markets, serving \textbf{25K+} active users.
+    \item Maintained { }\href{https://mailplus.com.au}{\textbf{ MailPlus -- MP Operator }} , a post-transportation application for \textbf{MailPlus Australia}, supporting \textbf{300+} owner-operators and \textbf{30K+} customers.
+    \item Developed and refactored { }\href{https://app.resiliencebox.com}{\textbf{ Resilience Box }} , an \textbf{international} wellbeing and resilience platform.
 \end{itemize}
 \textbf{Technical Contributions:}
 \begin{itemize}[label={\customsquare}]
@@ -166,7 +171,7 @@ Mehdi Karami$^{\text{\Letter}}$, Betsabeh Tanoori
 
 %-------------TEACHING EXPERIENCE---------------
 \section*{Teaching Experience}
-\textbf{Teaching Assistant (TA)} \hfill Zand Institute of Higher Education, Shiraz, Iran \\ [5pt]
+\textbf{Teaching Assistant (TA)} \hfill Zand Institute of Higher Education, Shiraz, Persia \\ [5pt]
 \begin{tabularx}{\textwidth}{@{}X X@{}}
     \customsquare\hspace{2mm}\textbf{Fall 2024:} 
     \begin{itemize}
@@ -200,14 +205,14 @@ Mehdi Karami$^{\text{\Letter}}$, Betsabeh Tanoori
 %---------------VOLUNTEERING----------------
 \section*{Volunteering}
 \textbf{Workshop on Git and GitHub} \\ [2pt]
-\textit{Zand Institute of Higher Education} -- \href{https://github.com/karami-mehdi/CV/blob/main/Assets/certificate-of-workshop-participation-karami-mehdi-zand-ihe.pdf}{\underline{Certificate}} \hfill Dec 2024 \\ [2pt]
-\textit{K. N. Toosi University of Technology} -- \href{https://github.com/karami-mehdi/CV/blob/main/Assets/certificate-of-workshop-participation-karami-mehdi.pdf}{\underline{Certificate}} \hfill May 2024
+\textit{Zand Institute of Higher Education} --{ } \href{https://github.com/karami-mehdi/CV/blob/main/Assets/certificate-of-workshop-participation-karami-mehdi-zand-ihe.pdf}{ Certificate } \hfill Dec 2024 \\ [2pt]
+\textit{K. N. Toosi University of Technology} --{ } \href{https://github.com/karami-mehdi/CV/blob/main/Assets/certificate-of-workshop-participation-karami-mehdi.pdf}{ Certificate } \hfill May 2024
 
 %--------------HONORS & AWARDS--------------
 \section*{Honors \& Awards}
 \noindent
 \textbf{First Place Winner in the C++ Programming Language Competition} \hfill May 2022 \\
-Zand Institute of Higher Education \hfill Shiraz, Iran
+Zand Institute of Higher Education \hfill Shiraz, Persia
 
 % %---------------CERTIFICATES----------------
 % \section*{Certificates}
