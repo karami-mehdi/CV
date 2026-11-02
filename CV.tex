@@ -18,6 +18,7 @@
 \usepackage{newtxtext,newtxmath}
 \usepackage{microtype}
 \usepackage{marvosym}
+\usepackage{array}
 
 % Document setup
 \geometry{left=0.5in, right=0.5in, top=1in, bottom=0.5in} % Set page margins
@@ -56,8 +57,8 @@
   \def\@oddfoot{
     \ifnum\value{page}=1
       \raisebox{4mm}{%
-        \hbox to 0pt{\small \textbf{November 2026}\hss}%
         \hbox to\textwidth{\hfill\thepage\hfill}%
+        \hbox to 0pt{\hss\small \textbf{November 2026}}%
       }%
     \fi
   }
@@ -71,7 +72,7 @@
 \newcommand{\sectionline}{\color{tintColor}\leaders\hrule height 0.5pt\hfill}
 \titleformat{\section}{\color{tintColor}\large\bfseries}{}{0em}{\sectiontitleformat}
 \newcommand{\sectiontitleformat}[1]{#1\ \sectionline}
-\titlespacing*{\section}{0pt}{*3.25}{1.5ex}
+\titlespacing*{\section}{0pt}{11pt}{5pt}
 
 \setlength{\tabcolsep}{18pt}
 \setlength{\fboxsep}{5pt}
@@ -87,6 +88,18 @@
 
 %--------------Custom Commands--------------
 \newcommand{\customsquare}{\raisebox{0.25ex}{\scalebox{0.45}{$\blacksquare$}}}
+\newcommand{\cventry}[2]{%
+    \noindent
+    \begin{tabularx}{\textwidth}{%
+        @{}p{0.18\textwidth}@{\hspace{0.2cm}}X@{}
+    }
+        #1 &
+        \begin{minipage}[t]{\linewidth}
+            #2
+        \end{minipage}
+    \end{tabularx}%
+    \par\vspace{1.1em}%
+}
 
 % Personal information
 \newcommand{\name}{\textcolor{tintColor}{Mehdi} Karami} % Name
@@ -108,10 +121,20 @@
 
 %-----------------EDUCATION-----------------
 \section*{Education}
-\textbf{Bachelor of Computer Engineering} -  GPA: 17.88/20 (equivalent to 3.57/4.00) \hfill Sep 2021 - Aug 2025 \\
-\textit{Zand Institute of Higher Education} \hfill Shiraz, Persia \\[5pt]
-\textbf{Visiting Student} \hfill Feb 2023 - Jul 2024 \\
-\textit{University of Science and Culture} \hfill Tehran, Persia
+\cventry{Sep 2021 -- Aug 2025}{
+    \textbf{Bachelor of Computer Engineering}\\
+    \textbf{Zand Institute of Higher Education}\\
+    Shiraz, Persia\\
+    GPA: 17.88/20 (equivalent to 3.57/4.00)\\
+    \textit{Research:} Medical Image Processing, Brain Image Segmentation
+}
+
+\cventry{Feb 2023 -- Jul 2024}{
+    \textbf{Visiting Student (Bachelor of Computer Engineering)}\\
+    \textbf{University of Science and Culture}\\
+    Tehran, Persia\\
+    \textit{Bachelor’s Project}: \href{https://github.com/karami-mehdi/AISightQuest}{ AI Sight Quest } (Integration of BERT-SQuAD for on-device document question answering) \\[-20pt]
+}
 
 %------------RESEARCH INTERESTS-------------
 \section*{Research Interests}
@@ -143,11 +166,11 @@ Mehdi Karami$^{\text{\Letter}}$, Betsabeh Tanoori
         \item Stack: Pytorch, FAISS, Transformers (HuggingFace), Sentence-Transformers, LangChain, PyMuPDF4LLM, ...
     \end{itemize}
 
-    \item \href{https://github.com/karami-mehdi/AISightQuest}{\textbf{ AI Sight Quest (Bachelor’s Project) }}
-    \begin{itemize}
-        \item Utilizes the BERT language model to extract text from images and answer questions about documents.
-        \item Stack: BERT-SQuAD, Swift, SwiftUI, SwiftData, Apple's Vision and Speech frameworks, TipKit, Protocol-Oriented Programming (POP), Model-view-viewmodel (MVVM), ...
-    \end{itemize}
+%    \item \href{https://github.com/karami-mehdi/AISightQuest}{\textbf{ AI Sight Quest (Bachelor’s Project) }}
+%    \begin{itemize}
+%        \item Utilizes the BERT language model to extract text from images and answer questions about documents.
+%        \item Stack: BERT-SQuAD, Swift, SwiftUI, SwiftData, Apple's Vision and Speech frameworks, TipKit, Protocol-Oriented Programming (POP), Model-view-viewmodel (MVVM), ...
+%    \end{itemize}
 
     \item \href{https://github.com/karami-mehdi/CyberattackDetection}{\textbf{ Cyberattack Detection and Anomalous Behavior Analysis }}
     \begin{itemize}
@@ -254,12 +277,12 @@ Zand Institute of Higher Education \hfill Shiraz, Persia
 \section*{Hobbies}
 
 \begin{tabularx}{\textwidth} { 
+    >{\customsquare\hspace{2mm}\hsize=0.3\hsize\centering\arraybackslash}X
+    >{\customsquare\hspace{2mm}\hsize=0.6\hsize\centering\arraybackslash}X
     >{\customsquare\hspace{2mm}\hsize=0.5\hsize\centering\arraybackslash}X
     >{\customsquare\hspace{2mm}\hsize=0.5\hsize\centering\arraybackslash}X
-    >{\customsquare\hspace{2mm}\hsize=1\hsize\centering\arraybackslash}X
-    >{\customsquare\hspace{2mm}\hsize=0.8\hsize\centering\arraybackslash}X
 }
-Swimming & Traveling & Cooking International Cuisine & Esports Gaming (LOL)
+Swimming & Bodybuilding & Traveling & Esports Gaming (LOL)
 \end{tabularx}
 
 \end{document}
