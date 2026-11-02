@@ -20,14 +20,46 @@
 \usepackage{marvosym}
 
 % Document setup
-\geometry{left=0.5in, right=0.5in, top=0.5in, bottom=0.5in} % Set page margins
+\geometry{left=0.5in, right=0.5in, top=1in, bottom=0.5in} % Set page margins
 % \raisebox{4mm}{\hbox to 0pt{\small Last Update: \textbf{September, 2025}\hss}\hbox to\textwidth{\hfill\thepage\hfill}}
 \makeatletter
 \def\ps@plain{
-  \def\@oddhead{\headername}
+  \def\@oddhead{
+    \ifnum\value{page}=1
+    \setlength{\fboxsep}{12pt} 
+    \fcolorbox{tintColor}{tintColor!10}{%
+    \parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}{%
+            \centering
+            \vspace*{8pt}
+
+            \textbf{\huge \smash{\name}} \hfill \hspace{4.65mm}
+            \href{mailto:\email}{\small { }\faEnvelope\ \email { }} \hfill
+            \href{tel:\phone}{\small { }\faPhone\ \phone { }} \hspace{8.35mm} \hfill\\[4pt]
+            
+            {\small \faLocationArrow\ Shiraz, Persia} \hfill \hfill
+            \href{https://github.com/karami-mehdi}{\small { }\faGithub\ github.com/karami-mehdi }
+            \hspace{6.5mm} \hfill
+            \href{https://www.linkedin.com/in/karami-mehdi}{\small { }\faLinkedin\ linkedin.com/karami-mehdi }
+        }%
+    }%
+    \else
+    \setlength{\fboxsep}{8pt}
+      \fcolorbox{tintColor}{tintColor!10}{%
+        \parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}{%
+          \centering
+          \textbf{Mehdi Karami}\hfill\thepage%
+        }%
+    }%
+    \fi
+  }
   \let\@evenhead\@oddhead
   \def\@oddfoot{
-    \raisebox{4mm}{\hbox to 0pt{\small Last Update: \textbf{November 2026}\hss}\hbox to\textwidth{\hfill\thepage\hfill}}
+    \ifnum\value{page}=1
+      \raisebox{4mm}{%
+        \hbox to 0pt{\small \textbf{November 2026}\hss}%
+        \hbox to\textwidth{\hfill\thepage\hfill}%
+      }%
+    \fi
   }
   \let\@evenfoot\@oddfoot
 }
@@ -42,6 +74,7 @@
 \titlespacing*{\section}{0pt}{*3.25}{1.5ex}
 
 \setlength{\tabcolsep}{18pt}
+\setlength{\fboxsep}{5pt}
 
 \setlist[itemize]{topsep=5pt, itemsep=0.5em, parsep=0pt, partopsep=0pt}
 % Hyperlink setup
@@ -54,11 +87,6 @@
 
 %--------------Custom Commands--------------
 \newcommand{\customsquare}{\raisebox{0.25ex}{\scalebox{0.45}{$\blacksquare$}}}
-\newcommand{\headername}{
-  \ifnum\value{page}>1
-    \raisebox{-4mm}{\textbf{Mehdi Karami}}
-  \fi
-}
 
 % Personal information
 \newcommand{\name}{\textcolor{tintColor}{Mehdi} Karami} % Name
@@ -68,17 +96,7 @@
 %%%%%%%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%
 \begin{document}
 
-%-----------------HEADING-------------------
-\begin{center}
-    \textbf{\huge \smash{\name}} \hfill \hspace{4.65mm}
-    \href{mailto:\email}{\small { }\faEnvelope\ \email { }} \hfill
-    \href{tel:\phone}{\small { }\faPhone\ \phone { }} \hspace{8.35mm} \hfill\\[4pt]
-    
-    {\small \faLocationArrow\ Shiraz, Persia} \hfill \hfill
-    \href{https://github.com/karami-mehdi}{\small { }\faGithub\ github.com/karami-mehdi }
-    \hspace{6.5mm} \hfill
-    \href{https://www.linkedin.com/in/karami-mehdi}{\small { }\faLinkedin\ linkedin.com/karami-mehdi }
-\end{center}
+\vspace*{8pt}
 
 %-----------------SUMMARY-------------------
 \section*{Summary}
