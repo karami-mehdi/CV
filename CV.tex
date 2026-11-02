@@ -27,7 +27,7 @@
 \def\ps@plain{
   \def\@oddhead{
     \ifnum\value{page}=1
-    \setlength{\fboxsep}{12pt} 
+    \setlength{\fboxsep}{12pt}
     \fcolorbox{tintColor}{tintColor!10}{%
     \parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}{%
             \centering
@@ -38,8 +38,7 @@
             \href{tel:\phone}{\small { }\faPhone\ \phone { }} \hspace{8.35mm} \hfill\\[4pt]
             
             {\small \faLocationArrow\ Shiraz, Persia} \hfill \hfill
-            \href{https://github.com/karami-mehdi}{\small { }\faGithub\ github.com/karami-mehdi }
-            \hspace{6.5mm} \hfill
+            \href{https://github.com/karami-mehdi}{\small { }\faGithub\ github.com/karami-mehdi }\hspace{5.2mm} \hfill
             \href{https://www.linkedin.com/in/karami-mehdi}{\small { }\faLinkedin\ linkedin.com/karami-mehdi }
         }%
     }%
@@ -91,7 +90,7 @@
 \newcommand{\cventry}[2]{%
     \noindent
     \begin{tabularx}{\textwidth}{%
-        @{}p{0.18\textwidth}@{\hspace{0.2cm}}X@{}
+        @{}p{0.1\textwidth}@{\hspace{0.2cm}}X@{}
     }
         #1 &
         \begin{minipage}[t]{\linewidth}
@@ -121,7 +120,8 @@
 
 %-----------------EDUCATION-----------------
 \section*{Education}
-\cventry{Sep 2021 -- Aug 2025}{
+%\cventry{Sep 2021 -- Aug 2025}{
+\cventry{2021--2025}{
     \textbf{Bachelor of Computer Engineering}\\
     \textbf{Zand Institute of Higher Education}\\
     Shiraz, Persia\\
@@ -129,7 +129,8 @@
     \textit{Research:} Medical Image Processing, Brain Image Segmentation
 }
 
-\cventry{Feb 2023 -- Jul 2024}{
+%\cventry{Feb 2023 -- Jul 2024}{
+\cventry{2023--2024}{
     \textbf{Visiting Student (Bachelor of Computer Engineering)}\\
     \textbf{University of Science and Culture}\\
     Tehran, Persia\\
@@ -242,15 +243,20 @@ Mehdi Karami$^{\text{\Letter}}$, Betsabeh Tanoori
 
 %---------------VOLUNTEERING----------------
 \section*{Volunteering}
-\textbf{Workshop on Git and GitHub} \\ [2pt]
-\textit{Zand Institute of Higher Education} --{ } \href{https://github.com/karami-mehdi/CV/blob/main/Assets/certificate-of-workshop-participation-karami-mehdi-zand-ihe.pdf}{ Certificate } \hfill Dec 2024 \\ [2pt]
-\textit{K. N. Toosi University of Technology} --{ } \href{https://github.com/karami-mehdi/CV/blob/main/Assets/certificate-of-workshop-participation-karami-mehdi.pdf}{ Certificate } \hfill May 2024
+
+\cventry{Dec 2024}{
+    \textbf{Workshop on Git and GitHub, Zand Institute of Higher Education}, { }\href{https://github.com/karami-mehdi/CV/blob/main/Assets/certificate-of-workshop-participation-karami-mehdi-zand-ihe.pdf}{ Certificate }
+}
+
+\cventry{May 2024}{
+    \textbf{Workshop on Git and GitHub, K. N. Toosi University of Technology}, { }\href{https://github.com/karami-mehdi/CV/blob/main/Assets/certificate-of-workshop-participation-karami-mehdi.pdf}{ Certificate }
+}
 
 %--------------HONORS & AWARDS--------------
 \section*{Honors \& Awards}
-\noindent
-\textbf{First Place Winner in the C++ Programming Language Competition} \hfill May 2022 \\
-Zand Institute of Higher Education \hfill Shiraz, Persia
+\cventry{May 2022}{
+    \textbf{First Place Winner in the C++ Programming Language Competition, Zand Institute of Higher Education}
+}
 
 % %---------------CERTIFICATES----------------
 % \section*{Certificates}
