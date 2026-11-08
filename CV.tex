@@ -28,6 +28,7 @@
   \def\@oddhead{
     \ifnum\value{page}=1
     \setlength{\fboxsep}{12pt}
+    \hspace*{-2mm}%
     \fcolorbox{tintColor}{tintColor!10}{%
     \parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}{%
             \centering
@@ -51,6 +52,7 @@
     }%
     \else
     \setlength{\fboxsep}{8pt}
+    \hspace*{-2mm}%
       \fcolorbox{tintColor}{tintColor!10}{%
         \parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}{%
           \centering
@@ -93,7 +95,6 @@
 }
 
 %--------------Custom Commands--------------
-\newcommand{\customsquare}{\raisebox{0.25ex}{\scalebox{0.45}{$\blacksquare$}}}
 \newcommand{\cventry}[2]{%
     \noindent
     \begin{tabularx}{\textwidth}{%
@@ -119,7 +120,7 @@
 
 %-----------------SUMMARY-------------------
 \section*{Summary}
-\begin{itemize}[label={\customsquare}]
+\begin{itemize}[label={\textbf{\textendash}}, nosep, leftmargin=*, itemsep=4.5pt]
     \item \textbf{Machine Learning Researcher} specializing in \textbf{image processing}, proposed a \textbf{pre-trained GAN for limited-label brain MRI segmentation} to advance \textbf{medical AI research}.
     \item Strong foundation in \textbf{machine learning theory and practice}, with experience in \textbf{model development, training, and optimization}, and a clear focus on contributing to \textbf{cutting-edge AI projects} and \textbf{real-world applications}.
     \item \textbf{Active open-source contributor} in AI, collaborating on \textbf{public and volunteer projects}, reflecting commitment to \textbf{innovation, collaboration, and advancement of the AI community}.
@@ -146,15 +147,14 @@
 
 %------------RESEARCH INTERESTS-------------
 \section*{Research Interests}
-\setlength{\tabcolsep}{18pt} % Adjusting space around the table
-
 \begin{tabularx}{\textwidth} { 
-    >{\customsquare \hspace{1mm} \raggedright\arraybackslash}X 
+    @{}
+    >{\textbf{\textendash}\hspace{2mm}\arraybackslash}X 
     @{\extracolsep{\fill}}
-    >{\customsquare \hspace{1mm} \raggedright\arraybackslash}X
+    >{\textbf{\textendash}\hspace{2mm}\arraybackslash}X
     @{\extracolsep{\fill}}
-    >{\customsquare \hspace{1mm} \raggedright\arraybackslash}X
-    @{\extracolsep{\fill}}
+    >{\textbf{\textendash}\hspace{2mm}\arraybackslash}X
+    @{}
     }
 Machine learning & Deep Learning & Natural Language Processing \\
 Computer Vision & Computational Biology & Scientific Computing
@@ -167,9 +167,9 @@ Mehdi Karami$^{\text{\Letter}}$, Betsabeh Tanoori
 
 %-----------OPEN SOURCE PROJECTS------------
 \section*{Open Source Projects}
-\begin{itemize}[label={\customsquare}]
+\begin{enumerate}[label={[\arabic*]}, nosep, leftmargin=*]
     \item \href{https://github.com/AINexumLab/slm-rag/}{\textbf{ Retrieval-Augmented Generation (RAG) for Small Language Models (SLMs) }}
-    \begin{itemize}
+    \begin{itemize}[label={\textbf{\textendash}}]
         \item Implements a RAG pipeline which includes text chunking, embedding, and vector retrieval to enable efficient generation and inference with local Small Language Models (SLMs) as well as standard language models.
         \item Stack: Pytorch, FAISS, Transformers (HuggingFace), Sentence-Transformers, LangChain, PyMuPDF4LLM, ...
     \end{itemize}
@@ -181,72 +181,74 @@ Mehdi Karami$^{\text{\Letter}}$, Betsabeh Tanoori
 %    \end{itemize}
 
     \item \href{https://github.com/karami-mehdi/CyberattackDetection}{\textbf{ Cyberattack Detection and Anomalous Behavior Analysis }}
-    \begin{itemize}
+    \begin{itemize}[label={\textbf{\textendash}}]
         \item Utilizes an LSTM-based RNN to detect cyberattacks from anomalous network traffic, including DDoS, port scanning, and brute-force attempts.
         \item Stack: TensorFlow/Keras, Scikit-learn, PCA, ROC Curve, ...
     \end{itemize}
 
     \item \href{https://github.com/karami-mehdi/SolarPowerGenerationAnalysis}{\textbf{ Solar Power Generation Prediction }}
-    \begin{itemize}
+    \begin{itemize}[label={\textbf{\textendash}}]
         \item Implements ML models (Linear, Decision Tree, Random Forest, Gradient Boosting, MLP, DNN) to predict solar power generation, evaluated via MAE, MSE, $R^2$, and confusion matrix.
         \item Stack: TensorFlow, Scikit-learn, Pandas, NumPy, Seaborn, ...
     \end{itemize}
     
     \item \href{https://github.com/AINexumLab/NexumAI}{\textbf{ NexumAI }}
-    \begin{itemize}
+    \begin{itemize}[label={\textbf{\textendash}}]
         \item Provides an interface for training models (e.g., image classification, segmentation) without technical expertise, letting users obtain trained models by supplying datasets and configurations.
         \item Stack: TensorFlow, PyTorch, Torchvision, PyQt6, ...
     \end{itemize}
-\end{itemize}
+\end{enumerate}
 
 \small \textbf{Additional projects can be found at: { }\href{https://github.com/karami-mehdi}{ GitHub account } .}
 
 %-------------WORK EXPERIENCE---------------
 \section*{Work Experience}
-\textbf{iOS Developer} (Full-time, on-site) \hfill Jun 2023 -- Jun 2024 \\
-\href{https://roundtableapps.com}{\textit{ Round Table Apps} } (Sydney, Australia) \hfill Development Office, Tehran, Persia \\ [-10pt]
-\begin{itemize}[label={\customsquare}]
-    \item Engineered { }\href{https://www.blossomapp.com}{\textbf{ Blossom -- Save and Invest }} , a consumer-facing financial application for the \textbf{Australian} and \textbf{New Zealand} markets, serving \textbf{25K+} active users.
-    \item Maintained { }\href{https://mailplus.com.au}{\textbf{ MailPlus -- MP Operator }} , a post-transportation application for \textbf{MailPlus Australia}, supporting \textbf{300+} owner-operators and \textbf{30K+} customers.
-    \item Developed and refactored { }\href{https://app.resiliencebox.com}{\textbf{ Resilience Box }} , an \textbf{international} wellbeing and resilience platform.
-\end{itemize}
-\textbf{Technical Contributions:}
-\begin{itemize}[label={\customsquare}]
-    \item Researched the development of \textbf{AR} and \textbf{VR} technologies in \textbf{healthcare} using \textbf{visionOS}.
-    \item Conducted in-depth analysis of \textbf{data flows} to identify and model \textbf{user behavioral patterns} across various scenarios.
-    \item Applied key design patterns such as \textbf{MVC}, \textbf{MVVM}, \textbf{VIP}, and \textbf{Repository}.
-    \item Boosted development efficiency by up to \textbf{40\%} through the creation of custom file templates.
-\end{itemize}
+\cventry{2023--2024}{
+    \textbf{iOS Developer} (Full-time, on-site)\\
+    \href{https://roundtableapps.com}{\textbf{ Round Table Apps} } (Sydney, Australia)\\
+    Development Office: Tehran, Persia\\
+    \textit{Working Projects:}
+    \begin{itemize}[label={\textbf{\textendash}}, nosep, itemsep=4.5pt]
+        \item \href{https://www.blossomapp.com}{\textbf{ Blossom -- Save and Invest }} , a financial application for the \textbf{Australian} and \textbf{New Zealand} markets, serving \textbf{25K+} active users.
+        \item \href{https://mailplus.com.au}{\textbf{ MailPlus -- MP Operator }} , an \textbf{Australian} post-transportation application, serving \textbf{300+} owner-operators and \textbf{30K+} customers.
+        \item \href{https://app.resiliencebox.com}{\textbf{ Resilience Box }} , an \textbf{international} wellbeing and resilience platform.
+    \end{itemize}
+    \textit{Technical Contributions:}
+    \begin{itemize}[label={\textbf{\textendash}}, nosep, itemsep=4.5pt]
+        \item Refactored legacy applications to improve maintainability, streamline \textbf{API integration}, and support future updates.
+        \item Analyzed and implemented \textbf{data flows} to model \textbf{user behavioral patterns} across various scenarios.
+        \item Applied key design patterns such as \textbf{MVC}, \textbf{MVVM}, \textbf{VIP}, and \textbf{Repository}.
+        \item Research and development of \textbf{AR} and \textbf{VR} technologies in \textbf{healthcare} using \textbf{visionOS}.
+        \item Boosted development efficiency by up to \textbf{40\%} through reusable templates for modules and repository-pattern implementations. \\ [-15pt]
+    \end{itemize}
+}
+
 
 %-------------TEACHING EXPERIENCE---------------
 \section*{Teaching Experience}
 \cventry{Winter 2025}{
     \textbf{Teaching Assistant (TA), Zand Institute of Higher Education}\\
-    - Fundamentals of Computer and Programming\\
-    - Digital Electronics\\
-    - Computer Architecture
+    \textbf{\textendash} \hspace{0.5pt} Fundamentals of Computer and Programming\\
+    \textbf{\textendash} \hspace{0.5pt} Digital Electronics\\
+    \textbf{\textendash} \hspace{0.5pt} Computer Architecture
 }
 
 \cventry{Fall 2024}{
     \textbf{Teaching Assistant (TA), Zand Institute of Higher Education}\\
-    - Human-Computer Interaction\\
-    - Digital Electronics\\ [-20pt]
+    \textbf{\textendash} \hspace{0.5pt} Human-Computer Interaction\\
+    \textbf{\textendash} \hspace{0.5pt} Digital Electronics\\ [-20pt]
 }
 
 %-------------TECHNICAL SKILLS---------------
 \section*{Technical Skills}
-\begin{tabularx}{\textwidth}{@{}X@{\hspace{5mm}}X@{}}
-\customsquare\hspace{2mm}\textbf{Programming \& Scripting:} Python, C/C++, Julia, MATLAB, Swift, Objective-C, SQL, Bash, LaTeX, ... & 
-\customsquare\hspace{2mm}\textbf{Data Science \& ML:} TensorFlow/Keras, PyTorch, Scikit-learn, OpenCV, HuggingFace, NumPy, Pandas, ... \\
-\vspace{-1mm}
-\customsquare\hspace{2mm}\textbf{Deep Learning:} Neural Networks, Image Processing, Natural Language Processing, Transformers, GAN, RAG &
-\vspace{-1mm}
-\customsquare\hspace{2mm}\textbf{Software Development:} Git, CI/CD, Design Patterns, SOLID, iOS Development, Unit Testing, TDD, BDD, Agile \\
-\vspace{-1mm}
-\customsquare\hspace{2mm}\textbf{Tools \& Platforms:} Jupyter, Google Colab, GitHub, GitLab, Command Line, Linux, macOS, Jira, Confluence, Trello &
-\vspace{-1mm}
-\customsquare\hspace{2mm}\textbf{Databases \& Cloud:} MLOps, Vector DBs, Relational DBs (SQLite, PostgreSQL), Docker, Kubernetes, Query Optimization
-\end{tabularx}
+\begin{itemize}[label={\textbf{\textendash}}, nosep, leftmargin=*, itemsep=4.5pt]
+\item \textbf{Programming \& Scripting:} Python, C/C++, Julia, MATLAB, Swift, Objective-C, SQL, Bash, LaTeX, ...
+\item \textbf{Data Science \& ML:} TensorFlow/Keras, PyTorch, Scikit-learn, OpenCV, HuggingFace, NumPy, Pandas, ...
+\item \textbf{Deep Learning:} Neural Networks, Image Processing, Natural Language Processing, Transformers, GAN, RAG
+\item \textbf{Software Development:} Git, CI/CD, Design Patterns, SOLID, iOS Development, Unit Testing, TDD, BDD, Agile
+\item \textbf{Tools \& Platforms:} Jupyter, Google Colab, GitHub, GitLab, Command Line, Linux, macOS, Jira, Confluence, Trello
+\item \textbf{Databases \& Cloud:} MLOps, Vector DBs, Relational DBs (SQLite, PostgreSQL), Docker, Kubernetes, Query Optimization
+\end{itemize}
 
 %---------------VOLUNTEERING----------------
 \section*{Volunteering}
@@ -285,14 +287,15 @@ Mehdi Karami$^{\text{\Letter}}$, Betsabeh Tanoori
 
 %------------------HOBBIES------------------
 \section*{Hobbies}
-
 \begin{tabularx}{\textwidth} { 
-    >{\customsquare\hspace{2mm}\hsize=0.3\hsize\centering\arraybackslash}X
-    >{\customsquare\hspace{2mm}\hsize=0.6\hsize\centering\arraybackslash}X
-    >{\customsquare\hspace{2mm}\hsize=0.5\hsize\centering\arraybackslash}X
-    >{\customsquare\hspace{2mm}\hsize=0.5\hsize\centering\arraybackslash}X
+    @{}
+    >{\textbf{\textendash}\hspace{2mm}\arraybackslash}X
+    >{\textbf{\textendash}\hspace{2mm}\arraybackslash}X
+    >{\textbf{\textendash}\hspace{2mm}\arraybackslash}X
+    >{\textbf{\textendash}\hspace{2mm}\arraybackslash}X
+    @{}
 }
-Swimming & Bodybuilding & Traveling & Esports Gaming (LOL)
+Swimming & Bodybuilding & Traveling & Gaming
 \end{tabularx}
 
 \end{document}
