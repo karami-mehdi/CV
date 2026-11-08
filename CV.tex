@@ -32,14 +32,21 @@
     \parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}{%
             \centering
             \vspace*{8pt}
-
-            \textbf{\huge \smash{\name}} \hfill \hspace{4.65mm}
-            \href{mailto:\email}{\small { }\faEnvelope\ \email { }} \hfill
-            \href{tel:\phone}{\small { }\faPhone\ \phone { }} \hspace{8.35mm} \hfill\\[4pt]
             
-            {\small \faLocationArrow\ Shiraz, Persia} \hfill \hfill
-            \href{https://github.com/karami-mehdi}{\small { }\faGithub\ github.com/karami-mehdi }\hspace{5.2mm} \hfill
-            \href{https://www.linkedin.com/in/karami-mehdi}{\small { }\faLinkedin\ linkedin.com/karami-mehdi }
+            \begin{tabularx}{\textwidth} { 
+                @{}
+                >{\raggedright\arraybackslash}X
+                @{\hspace{-3mm}}
+                @{\extracolsep{\fill}}
+                >{\raggedright\arraybackslash}X
+                @{\hspace{3mm}}
+                @{\extracolsep{\fill}}
+                >{\raggedright\arraybackslash}X
+                @{}
+                }
+            \textbf{\huge \smash{\name}} & Email: \href{mailto:\email}{{ }\email{ }} & Phone: \href{tel:\phone}{{ }\phone{ }} \\[4pt]
+            Location: Shiraz, Persia & GitHub: \href{https://github.com/karami-mehdi}{{ }github.com/karami-mehdi }\hspace{5.2mm} & LinkedIn: \href{https://www.linkedin.com/in/karami-mehdi}{{ }linkedin.com/karami-mehdi }
+            \end{tabularx}
         }%
     }%
     \else
