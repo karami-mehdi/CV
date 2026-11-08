@@ -80,7 +80,7 @@
 \newcommand{\sectionline}{\color{tintColor}\leaders\hrule height 0.5pt\hfill}
 \titleformat{\section}{\color{tintColor}\large\bfseries}{}{0em}{\sectiontitleformat}
 \newcommand{\sectiontitleformat}[1]{#1\ \sectionline}
-\titlespacing*{\section}{0pt}{11pt}{5pt}
+\titlespacing*{\section}{0pt}{12pt}{5pt}
 
 \setlength{\tabcolsep}{18pt}
 \setlength{\fboxsep}{5pt}
@@ -116,11 +116,11 @@
 %%%%%%%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%
 \begin{document}
 
-\vspace*{8pt}
+\vspace*{16pt}
 
 %-----------------SUMMARY-------------------
 \section*{Summary}
-\begin{itemize}[label={\textbf{\textendash}}, nosep, leftmargin=*, itemsep=4.5pt]
+\begin{itemize}[nosep, leftmargin=*, itemsep=4.5pt]
     \item \textbf{Machine Learning Researcher} specializing in \textbf{image processing}, proposed a \textbf{pre-trained GAN for limited-label brain MRI segmentation} to advance \textbf{medical AI research}.
     \item Strong foundation in \textbf{machine learning theory and practice}, with experience in \textbf{model development, training, and optimization}, and a clear focus on contributing to \textbf{cutting-edge AI projects} and \textbf{real-world applications}.
     \item \textbf{Active open-source contributor} in AI, collaborating on \textbf{public and volunteer projects}, reflecting commitment to \textbf{innovation, collaboration, and advancement of the AI community}.
@@ -147,18 +147,20 @@
 
 %------------RESEARCH INTERESTS-------------
 \section*{Research Interests}
-\begin{tabularx}{\textwidth} { 
-    @{}
-    >{\textbf{\textendash}\hspace{2mm}\arraybackslash}X 
-    @{\extracolsep{\fill}}
-    >{\textbf{\textendash}\hspace{2mm}\arraybackslash}X
-    @{\extracolsep{\fill}}
-    >{\textbf{\textendash}\hspace{2mm}\arraybackslash}X
-    @{}
-    }
-Machine learning & Deep Learning & Natural Language Processing \\
-Computer Vision & Computational Biology & Scientific Computing
-\end{tabularx}
+
+\noindent
+\makebox[\textwidth][l]{%
+    \makebox[0.4\textwidth][l]{\textbullet\ Machine Learning}%
+    \makebox[0.374\textwidth][l]{\textbullet\ Deep Learning}%
+    \makebox[0.2\textwidth][l]{\textbullet\ Natural Language Processing}%
+}
+
+\noindent
+\makebox[\textwidth][l]{%
+    \makebox[0.4\textwidth][l]{\textbullet\ Computer Vision}%
+    \makebox[0.374\textwidth][l]{\textbullet\ Computational Biology}%
+    \makebox[0.2\textwidth][l]{\textbullet\ Scientific Computing}%
+}
 
 %-------------PUBLICATION---------------
 \section*{Publication}
@@ -168,11 +170,9 @@ Mehdi Karami$^{\text{\Letter}}$, Betsabeh Tanoori
 %-----------OPEN SOURCE PROJECTS------------
 \section*{Open Source Projects}
 \begin{enumerate}[label={[\arabic*]}, nosep, leftmargin=*]
-    \item \href{https://github.com/AINexumLab/slm-rag/}{\textbf{ Retrieval-Augmented Generation (RAG) for Small Language Models (SLMs) }}
-    \begin{itemize}[label={\textbf{\textendash}}]
-        \item Implements a RAG pipeline which includes text chunking, embedding, and vector retrieval to enable efficient generation and inference with local Small Language Models (SLMs) as well as standard language models.
-        \item Stack: Pytorch, FAISS, Transformers (HuggingFace), Sentence-Transformers, LangChain, PyMuPDF4LLM, ...
-    \end{itemize}
+    \item \href{https://github.com/AINexumLab/slm-rag/}{\textbf{ Retrieval-Augmented Generation (RAG) for Small Language Models (SLMs) }} \\
+    A RAG pipeline, including text chunking, embedding, and vector retrieval, which enables efficient generation and inference with local Small Language Models (SLMs) as well as standard language models. \\[2.5pt]
+    \textit{Stack:} Pytorch, FAISS, Transformers (HuggingFace), Sentence-Transformers, LangChain, PyMuPDF4LLM, ... \\
 
 %    \item \href{https://github.com/karami-mehdi/AISightQuest}{\textbf{ AI Sight Quest (Bachelor’s Project) }}
 %    \begin{itemize}
@@ -180,46 +180,40 @@ Mehdi Karami$^{\text{\Letter}}$, Betsabeh Tanoori
 %        \item Stack: BERT-SQuAD, Swift, SwiftUI, SwiftData, Apple's Vision and Speech frameworks, TipKit, Protocol-Oriented Programming (POP), Model-view-viewmodel (MVVM), ...
 %    \end{itemize}
 
-    \item \href{https://github.com/karami-mehdi/CyberattackDetection}{\textbf{ Cyberattack Detection and Anomalous Behavior Analysis }}
-    \begin{itemize}[label={\textbf{\textendash}}]
-        \item Utilizes an LSTM-based RNN to detect cyberattacks from anomalous network traffic, including DDoS, port scanning, and brute-force attempts.
-        \item Stack: TensorFlow/Keras, Scikit-learn, PCA, ROC Curve, ...
-    \end{itemize}
+    \item \href{https://github.com/karami-mehdi/CyberattackDetection}{\textbf{ Cyberattack Detection and Anomalous Behavior Analysis }} \\
+    An LSTM-based RNN for detecting cyberattacks in anomalous network traffic, including DDoS, port scanning, and brute-force attacks.\\[2.5pt]
+    \textit{Stack:} TensorFlow/Keras, Scikit-learn, PCA, ROC Curve, ... \\
 
-    \item \href{https://github.com/karami-mehdi/SolarPowerGenerationAnalysis}{\textbf{ Solar Power Generation Prediction }}
-    \begin{itemize}[label={\textbf{\textendash}}]
-        \item Implements ML models (Linear, Decision Tree, Random Forest, Gradient Boosting, MLP, DNN) to predict solar power generation, evaluated via MAE, MSE, $R^2$, and confusion matrix.
-        \item Stack: TensorFlow, Scikit-learn, Pandas, NumPy, Seaborn, ...
-    \end{itemize}
+    \item \href{https://github.com/karami-mehdi/SolarPowerGenerationAnalysis}{\textbf{ Solar Power Generation Prediction }} \\
+    Implementing ML models (Linear, Decision Tree, Random Forest, Gradient Boosting, MLP, DNN) to predict solar power generation and evaluate the results via MAE, MSE, $R^2$, and confusion matrix. \\[2.5pt]
+    \textit{Stack:} TensorFlow, Scikit-learn, Pandas, NumPy, Seaborn, ... \\
     
-    \item \href{https://github.com/AINexumLab/NexumAI}{\textbf{ NexumAI }}
-    \begin{itemize}[label={\textbf{\textendash}}]
-        \item Provides an interface for training models (e.g., image classification, segmentation) without technical expertise, letting users obtain trained models by supplying datasets and configurations.
-        \item Stack: TensorFlow, PyTorch, Torchvision, PyQt6, ...
-    \end{itemize}
+    \item \href{https://github.com/AINexumLab/NexumAI}{\textbf{ NexumAI }} \\
+    An interface for training models (e.g., image classification, segmentation) without technical expertise, letting users obtain trained models by supplying datasets and configurations. \\[2.5pt]
+    \textit{Stack:} TensorFlow, PyTorch, Torchvision, PyQt6, ... \\
 \end{enumerate}
 
-\small \textbf{Additional projects can be found at: { }\href{https://github.com/karami-mehdi}{ GitHub account } .}
+\textbf{\small More projects and contributions: { }\href{https://github.com/karami-mehdi}{ GitHub }}
 
 %-------------WORK EXPERIENCE---------------
 \section*{Work Experience}
 \cventry{2023--2024}{
     \textbf{iOS Developer} (Full-time, on-site)\\
     \href{https://roundtableapps.com}{\textbf{ Round Table Apps} } (Sydney, Australia)\\
-    Development Office: Tehran, Persia\\
+    Development Office: Tehran, Persia\\[2.5pt]
     \textit{Projects:}
-    \begin{itemize}[label={\textbf{\textendash}}, nosep, itemsep=4.5pt]
-        \item \href{https://www.blossomapp.com}{\textbf{ Blossom -- Save and Invest }} , a financial application for the \textbf{Australian} and \textbf{New Zealand} markets, serving \textbf{25K+} active users.
-        \item \href{https://mailplus.com.au}{\textbf{ MailPlus -- MP Operator }} , an \textbf{Australian} post-transportation application, serving \textbf{300+} owner-operators and \textbf{30K+} customers.
-        \item \href{https://app.resiliencebox.com}{\textbf{ Resilience Box }} , an \textbf{international} wellbeing and resilience platform.
+    \begin{itemize}[label={}, nosep, leftmargin=0pt]
+        \item \href{https://www.blossomapp.com}{\textbf{ Blossom -- Save and Invest }} , a financial platform serving \textbf{25K+} active users across \textbf{Australia} and \textbf{New Zealand}.
+        \item \href{https://mailplus.com.au}{\textbf{ MailPlus -- MP Operator }} , an \textbf{Australian} post-transport application serving \textbf{300+} owner-operators and \textbf{30K+} customers.
+        \item \href{https://app.resiliencebox.com}{\textbf{ Resilience Box }} , an \textbf{international} wellbeing and resilience application.\\[-6.5pt]
     \end{itemize}
     \textit{Technical Contributions:}
-    \begin{itemize}[label={\textbf{\textendash}}, nosep, itemsep=4.5pt]
+    \begin{itemize}[label={}, nosep, leftmargin=0pt]
         \item Analyzed and implemented \textbf{data flows} to model \textbf{user behavioral patterns} across various scenarios.
         \item Applied key design patterns such as \textbf{MVC}, \textbf{MVVM}, \textbf{VIP}, and \textbf{Repository}.
         \item Refactored legacy applications to improve maintainability, streamline \textbf{API integration}, and support future updates.
         \item Research and development of \textbf{AR} and \textbf{VR} technologies in \textbf{healthcare} using \textbf{visionOS}.
-        \item Boosted development efficiency by up to \textbf{40\%} through reusable templates for modules and repository-pattern implementations. \\ [-15pt]
+        \item Boosted development efficiency by up to \textbf{40\%} through reusable templates for modules and repository implementations. \\ [-15pt]
     \end{itemize}
 }
 
@@ -303,15 +297,13 @@ Mehdi Karami$^{\text{\Letter}}$, Betsabeh Tanoori
 
 %------------------HOBBIES------------------
 \section*{Hobbies}
-\begin{tabularx}{\textwidth} { 
-    @{}
-    >{\textbf{\textendash}\hspace{2mm}\arraybackslash}X
-    >{\textbf{\textendash}\hspace{2mm}\arraybackslash}X
-    >{\textbf{\textendash}\hspace{2mm}\arraybackslash}X
-    >{\textbf{\textendash}\hspace{2mm}\arraybackslash}X
-    @{}
-}
-Swimming & Bodybuilding & Traveling & Gaming
-\end{tabularx}
+\noindent
+\textbullet\ Swimming
+\hfill
+\textbullet\ Bodybuilding
+\hfill
+\textbullet\ Traveling
+\hfill
+\textbullet\ Gaming
 
 \end{document}
